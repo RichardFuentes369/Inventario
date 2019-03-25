@@ -9,8 +9,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
 	<title>Document</title>
+	<link rel="stylesheet" href="{{ asset('css/index.css') }}">
 </head>
-<body>
+<body class="index">
 	
 	<div class="banner">
 		<nav class="navbar navbar-dark bg-dark">
@@ -25,14 +26,14 @@
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4">
 				<br><br><br><br>
-				@yield('login')
+				@yield('content')
 				<br><br><br><br>
 			</div>
 			<div class="col-sm-4"></div>
 		</div>
 	</div>
 
-	<div class="footer">
+	<div class="text-black">
 		<div class="footer-copyright text-center py-3">Richard Fuentes<br>© 2019
 		</div>
 	</div>

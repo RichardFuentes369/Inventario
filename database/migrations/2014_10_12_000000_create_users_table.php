@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->date('birthdate');
             $table->string('dni');
             $table->enum('sexo',['M','F']);
-            $table->enum('category',['administrador','vendedor']);
+            $table->enum('category',['admin','seller']);
             $table->string('phone')->nullable();
             $table->string('cellphone')->nullable();
             $table->timestamp('email_verified_at')->nullable();

@@ -1,5 +1,4 @@
-@extends('Plantillas.padmin')
+@extends('Plantillas.pseller')
 
 @section('content')
-
 @endsection

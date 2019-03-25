@@ -1,5 +1,5 @@
 @extends('Plantillas.phome')
 
-@section('login')
+@section('content')
 	@include('home.form.form-login')
 @endsection
