@@ -39,6 +39,9 @@ Route::group(['prefix'=>'administrador'], function(){
 	Route::get('empleados', function(){
 		return view('admin.views.empleados');
 	});
+	Route::get('clientes', function(){
+		return view('admin.views.clientes');
+	});
 	Route::get('ingresos', function(){
 		return view('admin.views.ingresos');
 	});
@@ -66,6 +69,9 @@ Route::group(['prefix'=>'vendedor'], function(){
 	});
 	Route::get('ajustes', function(){
 		return view('seller.views.ajustes');
+	});
+	Route::get('clientes', function(){
+		return view('seller.views.clientes');
 	});
 	Route::get('inventarios', function(){
 		return view('seller.views.inventarios');

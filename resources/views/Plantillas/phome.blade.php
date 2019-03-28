@@ -7,18 +7,17 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 	<title>Document</title>
 	<link rel="stylesheet" href="{{ asset('css/index.css') }}">
 </head>
 <body class="index">
 	
 	<div class="banner">
-		<nav class="navbar navbar-dark bg-dark">
-	  		<div class="navbar-header">
-		      <a class="navbar-brand" href="#">INVENTARIO</a>
-		    </div>		
-		</nav>
+		<div class="col-sm-12 navbar navbar-dark bg-dark">
+	  		<a class="navbar-brand font-tittle" href="#">INVENTARIO</a>
+		   	<sub style="color: white; float: right;margin-top: 40px">Javier Ricardo Baron Fuentes</sub>
+		</div>
 	</div>
 
 	<div class="col-sm-12">
