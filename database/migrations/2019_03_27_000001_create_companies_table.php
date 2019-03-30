@@ -19,6 +19,7 @@ class CreateCompaniesTable extends Migration
             $table->string('address')->nullable(); //direccion de la compañia
             $table->string('country')->nullable(); //pais de la compañia
             $table->string('department')->nullable(); //departamento de la compañia
+            $table->string('county')->nullable(); //condado o municipio
             $table->string('phone1')->nullable(); //telefono de contacto 1
             $table->string('phone2')->nullable(); //telefono de contacto 2
             $table->string('cellphone1')->nullable(); //celular de contacto 1

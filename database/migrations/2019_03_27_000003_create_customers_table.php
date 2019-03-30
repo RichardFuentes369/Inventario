@@ -25,6 +25,12 @@ class CreateCustomersTable extends Migration
             $table->string('address')->nullable(); //direccion del cliente
             $table->string('phone')->nullable(); //telefono del cliente
             $table->string('cellphone')->nullable(); //celular del cliente
+            $table->integer('companies_id')->unsigned(); //referencia id a la tabla compañia
+            $table->foreign('companies_id') //llave foranea
+                  ->references('id')
+                  ->on('companies')
+                  ->onUpdate('cascade')
+                  ->onDelete('cascade');
             $table->timestamps();
         });
     }

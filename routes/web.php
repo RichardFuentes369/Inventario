@@ -42,6 +42,9 @@ Route::group(['prefix'=>'administrador'], function(){
 	Route::get('clientes', function(){
 		return view('admin.views.clientes');
 	});
+	Route::get('proveedores', function(){
+		return view('admin.views.proveedores');
+	});
 	Route::get('ingresos', function(){
 		return view('admin.views.ingresos');
 	});

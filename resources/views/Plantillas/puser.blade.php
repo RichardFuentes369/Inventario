@@ -15,7 +15,7 @@
 	
 	<div class="banner">
 		<div class="col-sm-12 navbar navbar-dark bg-dark">
-	  		<a class="navbar-brand font-tittle" href="#">INVENTARIO</a>
+	  		<a class="navbar-brand font-tittle" href="{{ url('administrador') }}/{{ 'perfil' }}">INVENTARIO</a>
 		   	<sub style="color: white; float: right;margin-top: 40px">Javier Ricardo Baron Fuentes</sub>
 		</div>
 	</div>
@@ -27,11 +27,24 @@
 				<br><br>
 				<div class="card">
 				  <div class="card-header">
-				    <label for="login"><b>Adminitrador: 
-							        		{{ Auth::user()->name }} {{ Auth::user()->lastname }}</b></label>
+				  	<div class="col-sm-12">
+					  	<div class="row">
+					  		<div class="col-sm-6" align="left">
+					  			@if(Auth::user()->category == 'admin')
+					  			<label for="login"><b>Adminitrador:<br>{{ Auth::user()->name }} {{ Auth::user()->lastname }}</b></label>
+					  			@else
+					  			<label for="login"><b>Vendedor:<br>{{ Auth::user()->name }} {{ Auth::user()->lastname }}</b></label>
+					  			@endif
+					  		</div>
+					  		<div class="col-sm-6" align="right">
+					  		    <label for="login"><b>{{ Auth::user()->companies->business_name }}</b></label><br>
+					  		</div>
+					  	</div>				  		
+				  	</div>
 				  </div>
 				  <div class="card-body">
 				  	<div class="form-group">
+				  		@if(Auth::user()->category == 'admin')
 				  		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd; border-radius: 16px">
 						    <div class="collapse navbar-collapse">
 							    <ul class="navbar-nav mr-auto">
@@ -61,6 +74,7 @@
 							        	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 							        		<a class="nav-link" href="{{ url('administrador') }}/{{ 'empleados' }}">Empleados</a>
 							        		<a class="nav-link" href="{{ url('administrador') }}/{{ 'clientes' }}">Clientes</a>
+							           		<a class="nav-link" href="{{ url('administrador') }}/{{ 'proveedores' }}">Proveedores</a>
 							        	</div>
 							      	</li>
 							      	<li class="nav-item dropdown">
@@ -76,6 +90,50 @@
 							    </ul>
 							</div>
 						</nav>
+						@else
+				  		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd; border-radius: 16px">
+						    <div class="collapse navbar-collapse">
+							    <ul class="navbar-nav mr-auto">
+							      	<li class="nav-item dropdown">
+							        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							        		Cuenta
+							        	</a>
+							        	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							          		<a class="dropdown-item" href="{{ url('vendedor') }}/{{ 'perfil' }}">Perfil</a>
+							          		<a class="dropdown-item" href="{{ url('vendedor') }}/{{ 'ajustes' }}">Ajustes</a>
+							          		<a class="dropdown-item" href="{{ url('index') }}/{{('Logout')}}">{{ csrf_field() }}Salir</a>
+							        	</div>
+							      	</li>
+							      	<li class="nav-item dropdown">
+							        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							          	Personal
+							        	</a>
+							        	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							        		<a class="nav-link" href="{{ url('vendedor') }}/{{ 'clientes' }}">Clientes</a>
+							        	</div>
+							      	</li>
+							      	<li class="nav-item dropdown">
+							        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							          	Control
+							        	</a>
+							        	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								        	<a class="nav-link" href="{{ url('vendedor') }}/{{ 'inventarios' }}">Inventario</a>
+							        	</div>
+							      	</li>
+							      	<li class="nav-item dropdown">
+							        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							          	Movimientos
+							        	</a>
+							        	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							          		<a class="dropdown-item" href="{{ url('vendedor') }}/{{ 'devoluciones' }}">Devoluciones</a>
+							          		<a class="dropdown-item" href="{{ url('vendedor') }}/{{ 'ventas' }}">Ventas</a>
+							          		<a class="dropdown-item" href="{{ url('vendedor') }}/{{ 'gastos' }}">Gastos</a>
+							        	</div>
+							      	</li>
+							    </ul>
+							</div>
+						</nav>
+						@endif
 				  	</div>
 				  </div>
 				  <div class="col-sm-12">

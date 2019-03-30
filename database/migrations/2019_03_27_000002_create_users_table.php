@@ -25,6 +25,12 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique(); //correo del admin o vendedor
             $table->string('password')->default(bcrypt('123456')); //contraseña del admin o vendedor
             $table->enum('category',['admin','seller']); //categoria admin o vendedor
+            $table->integer('companies_id')->unsigned(); //referencia id a la tabla compañia
+            $table->foreign('companies_id') //llave foranea
+                  ->references('id')
+                  ->on('companies')
+                  ->onUpdate('cascade')
+                  ->onDelete('cascade');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

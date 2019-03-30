@@ -23,7 +23,9 @@ class UserSeeder extends Seeder
             'cellphone' => '3203897294',
             'email' => 'prueba1@gmail.com',
             'category' => 'admin',
+            'companies_id' => 1,
     	]);
+        $user1->save();
 
         $user2 = User::create([
             'id'    => 2,
@@ -36,6 +38,8 @@ class UserSeeder extends Seeder
             'cellphone' => '3213568975',
             'email' => 'prueba2@gmail.com',
             'category' => 'seller',
+            'companies_id' => 1,
         ]);
+        $user2->save();
     }
 }

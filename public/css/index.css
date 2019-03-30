@@ -6,6 +6,28 @@
 	font-family: 'Permanent Marker', cursive;
 }
 
+/*Boton añadir*/
+.botonanadir{
+	border-radius: 0px 200px 200px 200px;
+	-moz-border-radius: 0px 200px 200px 200px;
+	-webkit-border-radius: 0px 200px 200px 200px;
+	border: 0px solid #000000;
+}
+/*Boton ejecutar función*/
+.botonejecutarfuncion{
+	border-radius: 200px 0px 189px 0px;
+	-moz-border-radius: 200px 0px 189px 0px;
+	-webkit-border-radius: 200px 0px 189px 0px;
+	border: 0px solid #000000;
+}
+/*Botones funciones*/
+.botonfunciones{
+	border-radius: 200px 200px 200px 200px;
+	-moz-border-radius: 200px 200px 200px 200px;
+	-webkit-border-radius: 200px 200px 200px 200px;
+	border: 0px solid #000000;
+}
+
 /*
 #33B3D2
 #19BE4D

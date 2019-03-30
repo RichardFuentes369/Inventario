@@ -15,7 +15,7 @@
 	
 	<div class="banner">
 		<div class="col-sm-12 navbar navbar-dark bg-dark">
-	  		<a class="navbar-brand font-tittle" href="#">INVENTARIO</a>
+	  		<a class="navbar-brand font-tittle" href="{{ url('index') }}/{{ 'bienvenidos' }}">INVENTARIO</a>
 		   	<sub style="color: white; float: right;margin-top: 40px">Javier Ricardo Baron Fuentes</sub>
 		</div>
 	</div>

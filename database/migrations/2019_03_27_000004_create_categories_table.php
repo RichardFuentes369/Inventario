@@ -17,6 +17,12 @@ class CreateCategoriesTable extends Migration
             $table->bigIncrements('id');
             $table->string('category_name')->nullable(); //nombre de la categoria
             $table->string('description')->nullable(); //descripcion de la categoria
+            $table->integer('companies_id')->unsigned(); //referencia id a la tabla compañia
+            $table->foreign('companies_id') //llave foranea
+                  ->references('id')
+                  ->on('companies')
+                  ->onUpdate('cascade')
+                  ->onDelete('cascade');
             $table->timestamps();
         });
     }
