@@ -17,9 +17,11 @@ class CreateProvidersTable extends Migration
             $table->bigIncrements('id');
             $table->string('NIT')->nullable(); //nit del proveedor
             $table->string('business_name')->nullable(); //nombre de la empresa del proveedor
-            $table->string('address')->nullable(); //direccion de la empresa
             $table->string('country')->nullable(); //pais de la empresa
             $table->string('department')->nullable(); //departamento de la empresa
+            $table->string('county')->nullable(); //condado o municipio                         
+            $table->string('neighborhood')->nullable(); //barrio
+            $table->string('address')->nullable(); //direccion de la empresa
             $table->string('phone1')->nullable(); //telefono de contacto 1
             $table->string('phone2')->nullable(); //telefono de contacto 2
             $table->string('cellphone1')->nullable(); //celular de contacto 1
@@ -39,3 +41,4 @@ class CreateProvidersTable extends Migration
         Schema::dropIfExists('providers');
     }
 }
+

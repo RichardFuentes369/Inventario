@@ -20,6 +20,7 @@
         <button type="button" class="close" data-dismiss="modal" title="Cerrar">&times;</button>
       </div>
       <div class="modal-body">
+        @include('admin.form.form-addproviders')
       </div>
     </div>
   </div>

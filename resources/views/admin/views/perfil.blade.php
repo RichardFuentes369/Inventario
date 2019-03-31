@@ -5,6 +5,6 @@
 		<h3 align="left"><strong>Perfil</strong></h3>
 	</div>
 	<hr>
-	@include('admin.form.form-perfil')
+	@include('admin.form.form-profile')
 	<hr>
 @endsection

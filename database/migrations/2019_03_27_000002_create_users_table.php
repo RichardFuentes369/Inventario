@@ -18,10 +18,15 @@ class CreateUsersTable extends Migration
             $table->string('name'); //nombre del admn o vendedor
             $table->string('lastname'); //apellido del admin o vendedor
             $table->date('birthdate'); //fecha de nacimiento del admin o vendedor
+            $table->enum('document_type',['pasaporte','cc', 'ti']); //tipo de documento
             $table->string('dni'); //documento de idenificación del admin o vendedor
             $table->enum('sexo',['M','F']); //sexo de admin o vendedor
             $table->string('phone')->nullable(); //telefono del admin o vendedor
             $table->string('cellphone')->nullable(); //celular del admin o vendedor
+            $table->string('address')->nullable(); //dirección del admin o vendedor
+            $table->string('department')->nullable(); //departamento de ubicaciónn del vendedor
+            $table->string('county')->nullable(); //ciudad o municipio
+            $table->string('neighborhood')->nullable(); //barrio
             $table->string('email')->unique(); //correo del admin o vendedor
             $table->string('password')->default(bcrypt('123456')); //contraseña del admin o vendedor
             $table->enum('category',['admin','seller']); //categoria admin o vendedor

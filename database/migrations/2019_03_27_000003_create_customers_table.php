@@ -18,10 +18,13 @@ class CreateCustomersTable extends Migration
             $table->string('name'); //nombres del cliente
             $table->string('lastname'); //apellidos del cliente
             $table->date('birthdate'); //fecha de nacimiento
-            $table->enum('document_type',['nacional','extranjeria']);
+            $table->enum('document_type',['pasaporte','cc', 'ti']);
             $table->string('dni'); //documento de identidad
             $table->enum('sexo',['M','F']); //sexo del cliente
             $table->string('email')->unique(); //correo del cliente
+            $table->string('department')->nullable(); //departamento de ubicaciónn del cliente
+            $table->string('county')->nullable(); //condado o municipio
+            $table->string('neighborhood')->nullable(); //barrio
             $table->string('address')->nullable(); //direccion del cliente
             $table->string('phone')->nullable(); //telefono del cliente
             $table->string('cellphone')->nullable(); //celular del cliente
