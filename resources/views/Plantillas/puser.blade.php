@@ -55,18 +55,12 @@
 				  	<div class="form-group">
 				  		@if(Auth::user()->category == 'admin')
 				  		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd; border-radius: 16px">
-						    <div class="collapse navbar-collapse">
+				  			<a href="{{ url('administrador') }}/{{ 'perfil' }}" class="btn btn-secondary" title="Perfil" style="border-radius: 50px"><i class="fa fa-user"></i></a>
+						    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    							<span class="navbar-toggler-icon"></span>
+  							</button>
+						    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 							    <ul class="navbar-nav mr-auto">
-							      	<li class="nav-item dropdown">
-							        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							        		Cuenta
-							        	</a>
-							        	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							          		<a class="dropdown-item" href="{{ url('administrador') }}/{{ 'perfil' }}">Perfil</a>
-							          		<a class="dropdown-item" href="{{ url('administrador') }}/{{ 'ajustes' }}">Ajustes</a>
-							          		<a class="dropdown-item" href="{{ url('index') }}/{{('Logout')}}">{{ csrf_field() }}Salir</a>
-							        	</div>
-							      	</li>
 							      	<li class="nav-item dropdown">
 							        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							          	Control
@@ -96,23 +90,26 @@
 							          		<a class="dropdown-item" href="{{ url('administrador') }}/{{ 'costos' }}">Costos</a>
 							        	</div>
 							      	</li>
+							      	<li class="nav-item dropdown">
+							        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							        		Opciónes
+							        	</a>
+							        	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							          		<a class="dropdown-item" href="{{ url('administrador') }}/{{ 'ajustes' }}">Ajustes</a>
+							          		<a class="dropdown-item" href="{{ url('index') }}/{{('Logout')}}">{{ csrf_field() }}Salir</a>
+							        	</div>
+							      	</li>
 							    </ul>
 							</div>
 						</nav>
 						@else
 				  		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd; border-radius: 16px">
-						    <div class="collapse navbar-collapse">
+				  			<a href="{{ url('vendedor') }}/{{ 'perfil' }}" class="btn btn-secondary" title="Perfil" style="border-radius: 50px"><i class="fa fa-user"></i></a>
+						    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    							<span class="navbar-toggler-icon"></span>
+  							</button>
+						    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 							    <ul class="navbar-nav mr-auto">
-							      	<li class="nav-item dropdown">
-							        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							        		Cuenta
-							        	</a>
-							        	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							          		<a class="dropdown-item" href="{{ url('vendedor') }}/{{ 'perfil' }}">Perfil</a>
-							          		<a class="dropdown-item" href="{{ url('vendedor') }}/{{ 'ajustes' }}">Ajustes</a>
-							          		<a class="dropdown-item" href="{{ url('index') }}/{{('Logout')}}">{{ csrf_field() }}Salir</a>
-							        	</div>
-							      	</li>
 							      	<li class="nav-item dropdown">
 							        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							          	Personal
@@ -139,6 +136,15 @@
 							          		<a class="dropdown-item" href="{{ url('vendedor') }}/{{ 'gastos' }}">Gastos</a>
 							        	</div>
 							      	</li>
+							      	<li class="nav-item dropdown">
+							        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							        		Opciónes
+							        	</a>
+							        	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							          		<a class="dropdown-item" href="{{ url('vendedor') }}/{{ 'ajustes' }}">Ajustes</a>
+							          		<a class="dropdown-item" href="{{ url('index') }}/{{('Logout')}}">{{ csrf_field() }}Salir</a>
+							        	</div>
+							      	</li>
 							    </ul>
 							</div>
 						</nav>
@@ -156,7 +162,7 @@
 	
 	<br>
 	
-	<div class="text-white bg-info">
+	<div class="text-white bg-dark">
 		<div class="container">
 			<div class="col-sm-12">
 				<div class="row">

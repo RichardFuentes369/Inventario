@@ -43,7 +43,7 @@
 		</div>
 	</div>
 
-	<div class="text-white bg-info">
+	<div class="text-white bg-dark">
 		<div class="container">
 			<div class="col-sm-12">
 				<div class="row">
