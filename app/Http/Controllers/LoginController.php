@@ -21,9 +21,9 @@ class LoginController extends Controller
             $consulta = DB::SELECT('SELECT category FROM Users WHERE email = :varemail',['varemail' => $credentials['email']]);
             foreach ($consulta as $con) {
                 if(($con->category) == 'admin'){
-                    return view('admin.views.index');
+                    return redirect('administrador/perfil');
                 }else if(($con->category) == 'seller'){
-                    return view('seller.views.index');
+                    return redirect('vendedor/perfil');
                 }
             }
         }else{

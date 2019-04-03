@@ -23,11 +23,11 @@
 						    <span class="input-group-text" id="basic-addon1">TD</span>
 						</div>
 					    <input type="text" class="form-control" value="{{ Auth::user()->document_type }}" readonly>
-					    
+					    &nbsp;&nbsp;
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">DNI</span>
 						</div>
-					    <input type="text" class="form-control" value="{{ Auth::user()->dni }}" readonly>
+					    <input type="text" class="form-control" style="width: 20em" value="{{ Auth::user()->dni }}" readonly>
 					</div> 
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">

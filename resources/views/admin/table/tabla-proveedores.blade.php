@@ -1,35 +1,25 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nombre del proveedor</th>
-      <th scope="col">Opciónes</th>
+      <th scope="col">#id</th>
+      <th scope="col">NIT</th>
+      <th scope="col">Nombre del Proveedor</th>
+      <th scope="col">Ver</th>
+      <th scope="col">Actualizar</th>
+      <th scope="col">Eliminar</th>
     </tr>
   </thead>
   <tbody>
+    @foreach ($providers_list as $pl)
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td><button class="btn btn-primary"><i class="material-icons">visibility</i></button>
-          <button class="btn btn-warning"><i class="material-icons">update</i></button>
-          <button class="btn btn-danger"><i class="material-icons">delete_forever</i></button>
-      </td><!--Este boton permite ver los articulos que tiene esa categoria-->
+      <td>{{ $pl ->  id}}</td>
+      <td>{{ $pl ->  NIT}}</td>
+      <td>{{ $pl -> business_name }}</td>
+      <td><button class="btn btn-primary botonfunciones"><i class="material-icons">visibility</i></button></td>
+      <td><button class="btn btn-warning botonfunciones"><i class="material-icons">update</i></button></td>
+      <td><button class="btn btn-danger botonfunciones"><i class="material-icons">delete_forever</i></button></td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td><button class="btn btn-primary"><i class="material-icons">visibility</i></button>
-          <button class="btn btn-warning"><i class="material-icons">update</i></button>
-          <button class="btn btn-danger"><i class="material-icons">delete_forever</i></button>
-      </td><!--Este boton permite ver los articulos que tiene esa categoria-->
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td><button class="btn btn-primary"><i class="material-icons">visibility</i></button>
-          <button class="btn btn-warning"><i class="material-icons">update</i></button>
-          <button class="btn btn-danger"><i class="material-icons">delete_forever</i></button>
-      </td><!--Este boton permite ver los articulos que tiene esa categoria-->
-    </tr>
+    @endforeach
   </tbody>
 </table>
+

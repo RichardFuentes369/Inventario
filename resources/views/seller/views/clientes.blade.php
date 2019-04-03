@@ -6,7 +6,7 @@
 		<button aling="right" type="button" class="btn btn-success botonanadir" data-toggle="modal" data-target="#myModal">Añadir</button>
 	</div>
 	<hr>
-	@include('admin.table.tabla-clientes')
+	@include('seller.table.tabla-clientes')
 	<hr>
 @endsection
 

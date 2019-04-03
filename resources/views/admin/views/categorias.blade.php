@@ -6,11 +6,17 @@
 		<button aling="right" type="button" class="btn btn-success botonanadir" data-toggle="modal" data-target="#myModal">Añadir</button>
 	</div>
 	<hr>
-	@include('admin.table.tabla-categorias')
+  <div class="col-sm-12">
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        @include('admin.table.tabla-categorias')        
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+  </div>
 	<hr>
 @endsection
-
-
 
 <!--Modal-->
 <div id="myModal" class="modal fade" role="dialog">

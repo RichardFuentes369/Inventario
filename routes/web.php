@@ -33,18 +33,6 @@ Route::group(['prefix'=>'administrador'], function(){
 	Route::get('inventarios', function(){
 		return view('admin.views.inventarios');
 	});
-	Route::get('categorias', function(){
-		return view('admin.views.categorias');
-	});
-	Route::get('empleados', function(){
-		return view('admin.views.empleados');
-	});
-	Route::get('clientes', function(){
-		return view('admin.views.clientes');
-	});
-	Route::get('proveedores', function(){
-		return view('admin.views.proveedores');
-	});
 	Route::get('ingresos', function(){
 		return view('admin.views.ingresos');
 	});
@@ -54,22 +42,20 @@ Route::group(['prefix'=>'administrador'], function(){
 	Route::get('costos', function(){
 		return view('admin.views.costos');
 	});
-	Route::get('perfil', function(){
-		return view('admin.views.perfil');
-	});
 	Route::get('ajustes', function(){
 		return view('admin.views.ajustes');
 	});
+
+	/*controladores*/
+	Route::get('categorias','CategoriesController@allcategory');
+	Route::get('clientes','CustomersController@allcustomers');
+	Route::get('empleados','UserController@allsellers');
+	Route::get('proveedores','ProvidersController@allproviders');
+	Route::get('perfil','UserController@allpcu1');
 });
 
 Route::group(['prefix'=>'vendedor'], function(){	
 	/*vistas*/
-	Route::get('bienvenidos', function(){
-		return view('seller.views.index');
-	});
-	Route::get('perfil', function(){
-		return view('seller.views.perfil');
-	});
 	Route::get('ajustes', function(){
 		return view('seller.views.ajustes');
 	});
@@ -88,4 +74,6 @@ Route::group(['prefix'=>'vendedor'], function(){
 	Route::get('gastos', function(){
 		return view('seller.views.gastos');
 	});
+	/*controladores*/
+	Route::get('perfil','UserController@allc2');
 });
