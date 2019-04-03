@@ -5,9 +5,17 @@
 		<h3 align="left"><strong>Clientes</strong></h3>
 		<button aling="right" type="button" class="btn btn-success botonanadir" data-toggle="modal" data-target="#myModal">Añadir</button>
 	</div>
-	<hr>
-	@include('seller.table.tabla-clientes')
-	<hr>
+  <hr>
+  <div class="col-sm-12">
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        @include('seller.table.tabla-clientes')        
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+  </div>
+  <hr>
 @endsection
 
 <!--Modal-->

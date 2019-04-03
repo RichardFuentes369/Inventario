@@ -96,5 +96,141 @@ class ProviderSeeder extends Seeder
             'description' => 'Empresa de Shamppo',
     	]);
         $provider5->save();
+
+        $provider6 = providers::create([
+            'id'    => 6,
+            'NIT'   => '1-0000005',
+            'business_name' => 'Jhonson & Jhonson',
+            'country' => 'Colombia',
+            'department' => 'Cundinamarca',
+            'county' => 'Bogota',
+            'neighborhood' => 'Street',
+            'address' => 'Calle 93 # 93 - 125',
+            'phone1' => '3101111120',
+            'phone2' => '3101111121',
+            'cellphone1' => '6011120',
+            'cellphone2' => '6011121',
+            'description' => 'Empresa de Jabones',
+        ]);
+        $provider6->save();
+
+        $provider7 = providers::create([
+            'id'    => 7,
+            'NIT'   => '1-0000006',
+            'business_name' => 'Ebel',
+            'country' => 'Colombia',
+            'department' => 'Antioquia',
+            'county' => 'Medellin',
+            'neighborhood' => 'Comuna 3',
+            'address' => 'Calle 35 # 35 - 5',
+            'phone1' => '3101111122',
+            'phone2' => '3101111123',
+            'cellphone1' => '6011122',
+            'cellphone2' => '6011123',
+            'description' => 'Empresa de Belleza',
+        ]);
+        $provider7->save();
+
+        $provider8 = providers::create([
+            'id'    => 8,
+            'NIT'   => '1-0000007',
+            'business_name' => 'Savital',
+            'country' => 'Colombia',
+            'department' => 'Cali',
+            'county' => 'Valle del Cauca',
+            'neighborhood' => 'Honda',
+            'address' => 'Calle 135 # 135 - 33',
+            'phone1' => '3101111124',
+            'phone2' => '3101111125',
+            'cellphone1' => '6011124',
+            'cellphone2' => '6011125',
+            'description' => 'Empresa de Shamppo',
+        ]);
+        $provider8->save();
+
+        $provider9 = providers::create([
+            'id'    => 9,
+            'NIT'   => '1-0000008',
+            'business_name' => 'Ducales',
+            'country' => 'Colombia',
+            'department' => 'Cundinamarca',
+            'county' => 'Bogota',
+            'neighborhood' => 'Fontibon',
+            'address' => 'Calle 5 # 5 - 25',
+            'phone1' => '3101111126',
+            'phone2' => '3101111127',
+            'cellphone1' => '6011126',
+            'cellphone2' => '6011127',
+            'description' => 'Empresa de Comestibles',
+        ]);
+        $provider9->save();
+
+        $provider10 = providers::create([
+            'id'    => 10,
+            'NIT'   => '1-0000009',
+            'business_name' => 'Festival',
+            'country' => 'Colombia',
+            'department' => 'Nariño',
+            'county' => 'Hipiales',
+            'neighborhood' => 'Panlindo',
+            'address' => 'Calle 6 # 6 - 50',
+            'phone1' => '3101111128',
+            'phone2' => '3101111129',
+            'cellphone1' => '6011128',
+            'cellphone2' => '6011129',
+            'description' => 'Empresa de Comestibles',
+        ]);
+        $provider10->save();
+
+        $provider11 = providers::create([
+            'id'    => 11,
+            'NIT'   => '1-0000010',
+            'business_name' => 'Coca-Cola',
+            'country' => 'Colombia',
+            'department' => 'Antioquia',
+            'county' => 'Comuna 6',
+            'neighborhood' => 'Garcia Cadena',
+            'address' => 'Calle 35 # 35 - 25',
+            'phone1' => '3101111130',
+            'phone2' => '3101111131',
+            'cellphone1' => '6011130',
+            'cellphone2' => '6011131',
+            'description' => 'Empresa de Bebidas',
+        ]);
+        $provider11->save();
+
+        $provider12 = providers::create([
+            'id'    => 12,
+            'NIT'   => '1-0000011',
+            'business_name' => 'Agula',
+            'country' => 'Colombia',
+            'department' => 'Santander',
+            'county' => 'Bucaramanda',
+            'neighborhood' => 'El country',
+            'address' => 'Calle 35 # 35 - 25',
+            'phone1' => '3101111132',
+            'phone2' => '3101111133',
+            'cellphone1' => '6011132',
+            'cellphone2' => '6011133',
+            'description' => 'Empresa de Bebidas',
+        ]);
+        $provider12->save();
+
+        $provider13 = providers::create([
+            'id'    => 13,
+            'NIT'   => '1-0000012',
+            'business_name' => 'Pepsi',
+            'country' => 'Colombia',
+            'department' => 'Cali',
+            'county' => 'Valle del Cauca',
+            'neighborhood' => 'Saragosa',
+            'address' => 'Calle 60 # 60 - 25',
+            'phone1' => '3101111134',
+            'phone2' => '3101111135',
+            'cellphone1' => '6011134',
+            'cellphone2' => '6011135',
+            'description' => 'Empresa de Bebidas',
+        ]);
+        $provider13->save();
     }
 }

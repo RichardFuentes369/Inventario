@@ -15,6 +15,7 @@
 		  	<input type="password" id="password" name="password" placeholder="************" class="form-control">
 	        {!! $errors->first('password', '<span class="help-block" style="color:red">:message</span>') !!}	  		
 	  	</div>
+	  	<hr>
     	<button type="submit" class="btn btn-primary btn-block">Ingresar</button>
 	  </div>
 	</div>

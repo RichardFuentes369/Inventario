@@ -4,6 +4,7 @@
 
 .font-tittle{
 	font-family: 'Permanent Marker', cursive;
+	text-shadow: 2px 2px 5px #000000;
 }
 
 /*Boton añadir*/
@@ -27,8 +28,12 @@
 	-webkit-border-radius: 200px 200px 200px 200px;
 	border: 0px solid #000000;
 }
-
-/*
-#33B3D2
-#19BE4D
-*/
+/*Información Banner*/
+.information{	
+	font-family: 'Josefin Sans', sans-serif;
+	border-color: black;
+	color: white;
+	font-size: 11px;
+	text-align: right;
+	text-shadow: 2px 2px 5px #000000;
+}
