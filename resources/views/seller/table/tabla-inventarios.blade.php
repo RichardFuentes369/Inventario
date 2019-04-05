@@ -1,5 +1,5 @@
-<table class="table">
-  <thead>
+<table border="0" class="table table-responsive table-hover" style="text-align: center">
+  <thead class="tableth">
     <tr>
       <th scope="col">#</th>
       <th scope="col">Nombre de la categoria</th>

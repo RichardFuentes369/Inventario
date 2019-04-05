@@ -11,7 +11,11 @@
 	font-family: 'Permanent Marker', cursive;
 	text-shadow: 2px 2px 5px #000000;
 }
-
+/*Tabla de resultados*/
+.tableth{
+	background-color: #42B9D3;
+	color:#F5F5F6;
+}
 /*Boton añadir*/
 .botonanadir{
 	border-radius: 0px 200px 200px 200px;
