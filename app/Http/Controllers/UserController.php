@@ -23,6 +23,18 @@ class UserController extends Controller
     	$users_list = DB::table('users')->orderBy('id','asc')->where('category','seller')->paginate(10);
         return view('admin.views.empleados',compact('users_list'));
     }
+    /*Crear Empleado*/
+    public function createSeller(Request $request){
+        return 'createSeller';
+    }
+    /*Editar Empleado*/
+    public function updateSeller(Request $request){
+        return 'updateSeller';
+    }
+    /*Eliminar Empleado*/
+    public function deleteSeller($id){
+        return 'deleteSeller';
+    }
 
 
     /*VENDEDOR*/

@@ -3,7 +3,7 @@
 @section('content')
 	@if(Auth::check() == true) 	
 	<div class="col-sm-12">
-		<h3 align="left"><strong>Aviso</strong></h3>
+		<h3 align="left" style="color: red"><center><strong>¡Aviso!</strong></center></h3>
 	</div>
 	<hr>
 		<center>

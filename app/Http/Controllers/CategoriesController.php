@@ -50,7 +50,7 @@ class CategoriesController extends Controller
         $description = $request->input('description');
         $actualizar = DB::UPDATE('UPDATE categories set category_name = :varname, 
             description = :vardescription WHERE id = :varid',['varname' => $category_name,'vardescription' => $description,'varid' =>$id]);
-        Flash::success("Se ha actualizado el categoria con id: " .$id);
+        Flash::warning("Se ha actualizado el categoria con id: " .$id);
         return redirect('administrador/categorias');
     }
     /*Eliminar Categoria*/
