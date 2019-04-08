@@ -1,7 +1,7 @@
 @extends('Plantillas.puser')
 
 @section('content')
-	@if(Auth::check() == true)
+	@if(Auth::check() == true) 	
 	<div class="col-sm-12">
 		<h3 align="left"><strong>Aviso</strong></h3>
 	</div>

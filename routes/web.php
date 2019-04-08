@@ -47,7 +47,10 @@ Route::group(['prefix'=>'administrador'], function(){
 	});
 
 	/*controladores*/
-	Route::get('categorias','CategoriesController@allcategory');
+	Route::get('categorias','CategoriesController@allCategory');
+	Route::post('categoriasC','CategoriesController@createCategory');
+	Route::post('categoriasA','CategoriesController@updateCategory');
+	Route::get('categoriasB/{id}', 'CategoriesController@deleteCategory')->where(['id' => '[0-9]+']);
 	Route::get('clientes','CustomersController@allcustomersA');
 	Route::get('empleados','UserController@allsellers');
 	Route::get('proveedores','ProvidersController@allproviders');

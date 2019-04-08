@@ -5,6 +5,7 @@
 		<h3 align="left"><strong>Inventario</strong></h3>
 	</div>
 	<hr>
+	@include('flash::message')	
 	@include('seller.table.tabla-inventarios')
 	<hr>
 @endsection

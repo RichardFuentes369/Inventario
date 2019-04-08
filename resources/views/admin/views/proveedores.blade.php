@@ -8,11 +8,12 @@
 	<hr>
   <div class="col-sm-12">
     <div class="row">
-      <div class="col-sm-1"></div>
-      <div class="col-sm-10">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        @include('flash::message')  
         @include('admin.table.tabla-proveedores')        
       </div>
-      <div class="col-sm-1"></div>
+      <div class="col-sm-2"></div>
     </div>
   </div>
 	<hr>

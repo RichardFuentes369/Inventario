@@ -10,7 +10,7 @@ class ProvidersController extends Controller
     /*ADMINISTRADOR*/
     /*Mostrar Todas los proveedores*/
     public function allproviders(){
-    	$providers_list = DB::table('providers')->orderBy('id','asc')->get();
+    	$providers_list = DB::table('providers')->orderBy('id','asc')->paginate(10);
         return view('admin.views.proveedores',compact('providers_list'));
     }
 }

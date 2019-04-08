@@ -20,7 +20,7 @@ class UserController extends Controller
     }    
     /*Mostrar Todas los empleados*/
     public function allsellers(){
-    	$users_list = DB::table('users')->orderBy('id','asc')->where('category','seller')->get();
+    	$users_list = DB::table('users')->orderBy('id','asc')->where('category','seller')->paginate(10);
         return view('admin.views.empleados',compact('users_list'));
     }
 

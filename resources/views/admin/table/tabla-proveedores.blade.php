@@ -23,3 +23,4 @@
   </tbody>
 </table>
 
+{{ $providers_list->links( "pagination::bootstrap-4") }}

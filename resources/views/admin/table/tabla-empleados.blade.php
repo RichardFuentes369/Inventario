@@ -25,3 +25,4 @@
   </tbody>
 </table>
 
+{{ $users_list->links( "pagination::bootstrap-4") }}
