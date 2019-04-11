@@ -51,14 +51,18 @@ Route::group(['prefix'=>'administrador'], function(){
 	Route::post('categoriasC','CategoriesController@createCategory');
 	Route::post('categoriasA','CategoriesController@updateCategory');
 	Route::get('categoriasB/{id}', 'CategoriesController@deleteCategory')->where(['id' => '[0-9]+']);
-	Route::get('clientes','CustomersController@allcustomersA');
 	Route::get('empleados','UserController@allsellers');
 	Route::post('empleadosC','UserController@createSeller');
 	Route::post('empleadosA','UserController@updateSeller');
 	Route::get('empleadosB/{id}', 'UserController@deleteSeller')->where(['id' => '[0-9]+']);
-	Route::get('clientesB/{id}', 'CustomersController@deleteCustomer')->where(['id' => '[0-9]+']);
-	Route::get('proveedoresB/{id}', 'ProvidersController@deleteProvider')->where(['id' => '[0-9]+']);
+	Route::get('clientes','CustomersController@allcustomersA');
+	Route::post('clientesC','CustomersController@createCustomersA');
+	Route::post('clientesA','CustomersController@updateCustomersA');
+	Route::get('clientesB/{id}', 'CustomersController@deleteCustomersA')->where(['id' => '[0-9]+']);
 	Route::get('proveedores','ProvidersController@allproviders');
+	Route::post('proveedoresC','ProvidersController@createProvider');
+	Route::post('proveedoresA','ProvidersController@updateProvider');	
+	Route::get('proveedoresB/{id}', 'ProvidersController@deleteProvider')->where(['id' => '[0-9]+']);
 	Route::get('perfil','UserController@allpcu1');
 });
 

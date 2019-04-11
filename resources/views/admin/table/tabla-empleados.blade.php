@@ -48,7 +48,7 @@
         <button type="button" class="close" data-dismiss="modal" title="Cerrar">&times;</button>
       </div>
       <div class="modal-body">
-        @include('admin.form.form-seemployee')
+        @include('admin.form.form-seeseller')
       </div>
     </div>
   </div>
@@ -62,7 +62,7 @@
         <button type="button" class="close" data-dismiss="modal" title="Cerrar">&times;</button>
       </div>
       <div class="modal-body">
-        @include('admin.form.form-editemployee')
+        @include('admin.form.form-editseller')
       </div>
     </div>
   </div>
@@ -86,7 +86,7 @@
     document.getElementById('semail').innerHTML =  email;
   }
 
-  function updateData(id,name,lastname,dni,birthdate,cellphone,address,department,county,neighborhood,email){
+  function updateData(id,name,lastname,dni,birthdate,phone,cellphone,address,department,county,neighborhood,email){
     document.getElementById('uid').innerHTML = id;
     document.getElementById('uname').innerHTML = name;    
     document.getElementById('ulastname').innerHTML = lastname;

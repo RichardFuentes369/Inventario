@@ -13,7 +13,7 @@
     @foreach ($providers_list as $pl)
     <tr>
       <td id="id">{{ $pl ->  id}}</td>
-      <td id="nit">{{ $pl ->  NIT}}</td>
+      <td id="nit">{{ $pl ->  nit}}</td>
       <td id="business_name">{{ $pl -> business_name }}</td>
       <td style="display: none;" id="country">{{ $pl -> country }}</td>
       <td style="display: none;" id="department">{{ $pl -> department }}</td>
@@ -25,8 +25,8 @@
       <td style="display: none;" id="cellphone1">{{ $pl -> cellphone1 }}</td>
       <td style="display: none;" id="cellphone2">{{ $pl -> cellphone2 }}</td>
       <td style="display: none;" id="description">{{ $pl -> description }}</td>
-      <td><button class="btn btn-primary botonfunciones" data-toggle="modal" data-target="#myModal1" onClick="seeData('{{ $pl -> NIT }}', '{{ $pl -> business_name }}', '{{ $pl -> country }}', '{{ $pl -> department }}', '{{ $pl -> county }}', '{{ $pl -> neighborhood }}', '{{ $pl -> address }}', '{{ $pl -> phone1 }}', '{{ $pl -> phone2 }}', '{{ $pl -> cellphone1 }}', '{{ $pl -> cellphone2 }}', '{{ $pl -> description }}')"><i class="material-icons">visibility</i></button></td>
-      <td><button class="btn btn-warning botonfunciones" data-toggle="modal" data-target="#myModal2" onClick="updateData('{{ $pl -> id }}', '{{ $pl -> NIT }}', '{{ $pl -> business_name }}', '{{ $pl -> country }}', '{{ $pl -> department }}', '{{ $pl -> county }}', '{{ $pl -> neighborhood }}', '{{ $pl -> address }}', '{{ $pl -> phone1 }}', '{{ $pl -> phone2 }}', '{{ $pl -> cellphone1 }}', '{{ $pl -> cellphone2 }}', '{{ $pl -> description }}')"><i class="material-icons">update</i></button></td>
+      <td><button class="btn btn-primary botonfunciones" data-toggle="modal" data-target="#myModal1" onClick="seeData('{{ $pl -> nit }}', '{{ $pl -> business_name }}', '{{ $pl -> country }}', '{{ $pl -> department }}', '{{ $pl -> county }}', '{{ $pl -> neighborhood }}', '{{ $pl -> address }}', '{{ $pl -> phone1 }}', '{{ $pl -> phone2 }}', '{{ $pl -> cellphone1 }}', '{{ $pl -> cellphone2 }}', '{{ $pl -> description }}')"><i class="material-icons">visibility</i></button></td>
+      <td><button class="btn btn-warning botonfunciones" data-toggle="modal" data-target="#myModal2" onClick="updateData('{{ $pl -> id }}', '{{ $pl -> nit }}', '{{ $pl -> business_name }}', '{{ $pl -> country }}', '{{ $pl -> department }}', '{{ $pl -> county }}', '{{ $pl -> neighborhood }}', '{{ $pl -> address }}', '{{ $pl -> phone1 }}', '{{ $pl -> phone2 }}', '{{ $pl -> cellphone1 }}', '{{ $pl -> cellphone2 }}', '{{ $pl -> description }}')"><i class="material-icons">update</i></button></td>
       <td><form action="{{ url('administrador') }}/{{ 'proveedoresB' }}/{{ $pl -> id }}" method="Get">
         <button class="btn btn-danger botonfunciones" onClick="javascript: return confirm('¿Esta segudo que desea eliminar la categoria con ID {{ $pl -> id }}?');"><i class="material-icons">delete_forever</i></button></form></td>
     </tr>

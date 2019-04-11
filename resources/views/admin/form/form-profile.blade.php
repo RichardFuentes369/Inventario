@@ -24,7 +24,7 @@
 				<div class="form-group">
 				  <select multiple class="form-control" id="exampleFormControlSelect2" style="height: 210px">
 				    @foreach ($providers_list as $ul)
-				    <option value="">{{ $ul -> NIT }}, {{ $ul ->  business_name}}</option>
+				    <option value="">{{ $ul -> nit }}, {{ $ul ->  business_name}}</option>
 				    @endforeach
 				  </select>
 				</div>

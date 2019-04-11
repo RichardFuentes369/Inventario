@@ -2,7 +2,9 @@
 
 namespace inventarios\Http\Controllers;
 
+use Auth;
 use inventarios\User;
+use Laracasts\Flash\Flash;  
 use inventarios\providers;
 use inventarios\customers;
 use Illuminate\Http\Request;
@@ -25,15 +27,68 @@ class UserController extends Controller
     }
     /*Crear Empleado*/
     public function createSeller(Request $request){
-        return 'createSeller';
+        $dni = $request->input('dni');
+        $ultimate_id = DB::SELECT('SELECT id FROM users order by id desc limit 1');
+        foreach ($ultimate_id as $ultimo_id) {
+            $ultimo_id = $ultimo_id -> id;
+        }
+        $existe = DB::SELECT('SELECT * FROM users WHERE dni = :vardni',['vardni' => $dni]);
+        if($existe == false){
+            $u = new User();
+            if($ultimo_id == null){
+                $u->id == 1;
+            }else{
+                $u->id = $ultimo_id + 1;
+            }
+            $u->name = $request->input('name');
+            $u->lastname = $request->input('lastname');
+            $u->birthdate = $request->input('fn');
+            $u->document_type = $request->input('td');
+            $u->dni = $request->input('dni');
+            $u->sexo = $request->input('sexo');
+            $u->phone = $request->input('phone');
+            $u->cellphone = $request->input('cellphone');
+            $u->address = $request->input('address');
+            $u->department = $request->input('department');
+            $u->county = $request->input('county');
+            $u->neighborhood = $request->input('neighborhood');
+            $u->email = $request->input('email');
+            $u->category = "seller";
+            $u->companies_id = Auth::user()->companies->id;
+            $u->save();
+            Flash::success("Se ha registrado el empleado: ".$u->name." ".$u->lastname   . " de forma correcta");
+            return redirect('administrador/empleados');
+        }else{
+            Flash::error("No se pudo registrar el empleado con dni: ".$dni. " porque ya hay un empleado <br> registrado con el mismo dni");
+            return redirect('administrador/empleados');
+        }
     }
     /*Editar Empleado*/
     public function updateSeller(Request $request){
-        return 'updateSeller';
+        $id = $request->input('id');
+        $name = $request->input('name');
+        $lastname = $request->input('lastname');
+        $dni = $request->input('dni');
+        $birthdate = $request->input('fn');
+        $phone = $request->input('phone');
+        $cellphone = $request->input('cellphone');
+        $address = $request->input('address');
+        $department = $request->input('department');
+        $county = $request->input('county');
+        $neighborhood = $request->input('neighborhood');        
+        $email = $request->input('email');
+        $actualizar = DB::UPDATE('UPDATE users set name = :varname, 
+            lastname = :varlastname, dni = :vardni, birthdate = :varfn, phone = :varphone, cellphone = :varcellphone,
+            address = :varaddress, department = :vardepartament, county = :varcounty, neighborhood = :varneighborhood,
+            email = :varemail  WHERE id = :varid',['varname' => $name,'varlastname' => $lastname,'vardni' => $dni,'varfn' => $birthdate,'varphone' => $phone,'varcellphone' => $cellphone,'varaddress' => $address,'vardepartament' => $department,'varcounty' => $county,'varneighborhood' => $neighborhood,'varemail' => $email,'varid' => $id]);
+        Flash::warning("Se ha actualizado el categoria con id: " .$id);
+        return redirect('administrador/empleados');
     }
     /*Eliminar Empleado*/
     public function deleteSeller($id){
-        return 'deleteSeller';
+        $existe = DB::DELETE('DELETE FROM users WHERE id = :varid',['varid' => $id]);
+        Flash::error("Se ha eliminado el empleado con " . $id . " de forma correcta");
+        return redirect('administrador/empleados');
     }
 
 

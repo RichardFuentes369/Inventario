@@ -14,7 +14,7 @@ class ProviderSeeder extends Seeder
     {
         $provider1 = providers::create([
     	    'id'	=> 1,
-        	'NIT'	=> '1-0000000',
+        	'nit'	=> '1-0000000',
             'business_name' => 'Dersa',
             'country' => 'Colombia',
             'department' => 'Cundinamarca',
@@ -31,7 +31,7 @@ class ProviderSeeder extends Seeder
 
         $provider2 = providers::create([
     	    'id'	=> 2,
-        	'NIT'	=> '1-0000001',
+        	'nit'	=> '1-0000001',
             'business_name' => 'Tigre',
             'country' => 'Colombia',
             'department' => 'Cundinamarca',
@@ -48,7 +48,7 @@ class ProviderSeeder extends Seeder
 
         $provider3 = providers::create([
     	    'id'	=> 3,
-        	'NIT'	=> '1-0000002',
+        	'nit'	=> '1-0000002',
             'business_name' => 'Wash',
             'country' => 'Colombia',
             'department' => 'Cali',
@@ -65,7 +65,7 @@ class ProviderSeeder extends Seeder
 
         $provider4 = providers::create([
     	    'id'	=> 4,
-        	'NIT'	=> '1-0000003',
+        	'nit'	=> '1-0000003',
             'business_name' => 'Colgate',
             'country' => 'Colombia',
             'department' => 'Antioquia',
@@ -82,7 +82,7 @@ class ProviderSeeder extends Seeder
 
         $provider5 = providers::create([
     	    'id'	=> 5,
-        	'NIT'	=> '1-0000004',
+        	'nit'	=> '1-0000004',
             'business_name' => 'Ego',
             'country' => 'Colombia',
             'department' => 'Nariño',
@@ -99,7 +99,7 @@ class ProviderSeeder extends Seeder
 
         $provider6 = providers::create([
             'id'    => 6,
-            'NIT'   => '1-0000005',
+            'nit'   => '1-0000005',
             'business_name' => 'Jhonson & Jhonson',
             'country' => 'Colombia',
             'department' => 'Cundinamarca',
@@ -116,7 +116,7 @@ class ProviderSeeder extends Seeder
 
         $provider7 = providers::create([
             'id'    => 7,
-            'NIT'   => '1-0000006',
+            'nit'   => '1-0000006',
             'business_name' => 'Ebel',
             'country' => 'Colombia',
             'department' => 'Antioquia',
@@ -133,7 +133,7 @@ class ProviderSeeder extends Seeder
 
         $provider8 = providers::create([
             'id'    => 8,
-            'NIT'   => '1-0000007',
+            'nit'   => '1-0000007',
             'business_name' => 'Savital',
             'country' => 'Colombia',
             'department' => 'Cali',
@@ -150,7 +150,7 @@ class ProviderSeeder extends Seeder
 
         $provider9 = providers::create([
             'id'    => 9,
-            'NIT'   => '1-0000008',
+            'nit'   => '1-0000008',
             'business_name' => 'Ducales',
             'country' => 'Colombia',
             'department' => 'Cundinamarca',
@@ -167,7 +167,7 @@ class ProviderSeeder extends Seeder
 
         $provider10 = providers::create([
             'id'    => 10,
-            'NIT'   => '1-0000009',
+            'nit'   => '1-0000009',
             'business_name' => 'Festival',
             'country' => 'Colombia',
             'department' => 'Nariño',
@@ -184,7 +184,7 @@ class ProviderSeeder extends Seeder
 
         $provider11 = providers::create([
             'id'    => 11,
-            'NIT'   => '1-0000010',
+            'nit'   => '1-0000010',
             'business_name' => 'Coca-Cola',
             'country' => 'Colombia',
             'department' => 'Antioquia',
@@ -201,7 +201,7 @@ class ProviderSeeder extends Seeder
 
         $provider12 = providers::create([
             'id'    => 12,
-            'NIT'   => '1-0000011',
+            'nit'   => '1-0000011',
             'business_name' => 'Agula',
             'country' => 'Colombia',
             'department' => 'Santander',
@@ -218,7 +218,7 @@ class ProviderSeeder extends Seeder
 
         $provider13 = providers::create([
             'id'    => 13,
-            'NIT'   => '1-0000012',
+            'nit'   => '1-0000012',
             'business_name' => 'Pepsi',
             'country' => 'Colombia',
             'department' => 'Cali',
