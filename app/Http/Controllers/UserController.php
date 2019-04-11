@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
-    /*ADMINISTRADOR*/
+    /**********************************************************ADMINISTRADOR*********************************************************/
     /*Listar Proveedores, Empleados, Clientes*/
     public function allpcu1(){
     	$users_list = User::all();
@@ -90,14 +90,62 @@ class UserController extends Controller
         Flash::error("Se ha eliminado el empleado con " . $id . " de forma correcta");
         return redirect('administrador/empleados');
     }
+    /*Ajustes Administrador*/
+    public function actualizarA(Request $request){
+        $name = $request->input('name');
+        $lastname = $request->input('lastname');  
+        $email = $request->input('email');  
+        $dni = $request->input('dni');
+        $sexo = $request->input('sexo');
+        $phone = $request->input('phone');
+        $birthdate = $request->input('birthdate');
+        $cellphone = $request->input('cellphone');
+        $password = $request->input('password');
+        $passwordencriptada = bcrypt($password);
+        if($password == ""){
+            $actualizar = DB::UPDATE('UPDATE Users set name = :varname, lastname = :varlastname, email = :varcorreo,
+             sexo = :varsexo, phone = :varphone, cellphone = :varcellphone, birthdate = :varbirthdate
+            WHERE dni = :vardni',['varname' => $name,'varlastname' => $lastname,'varcorreo' => $email,'varcorreo' => $email,'varsexo' => $sexo,'varphone' => $phone,'varbirthdate' => $birthdate,'varcellphone' => $cellphone, 'vardni' =>$dni]);
+        }else{
+            $actualizar = DB::UPDATE('UPDATE Users set name = :varname, lastname = :varlastname, email = :varcorreo,
+             sexo = :varsexo, phone = :varphone, cellphone = :varcellphone, birthdate = :varbirthdate, password = :varpassword
+            WHERE dni = :vardni',['varname' => $name,'varlastname' => $lastname,'varcorreo' => $email,'varcorreo' => $email,'varsexo' => $sexo,'varphone' => $phone,'varbirthdate' => $birthdate,'varcellphone' => $cellphone,'varpassword' => $passwordencriptada, 'vardni' =>$dni]);
+        }
+        Auth::logout();
+        return redirect('/');
+    }
 
 
-    /*VENDEDOR*/
+    /**************************************************************VENDEDOR**********************************************************/
     /*Clientes*/
     public function allc2(){
         $customers_list = customers::all();
         return view('seller.views.perfil')->with('customers_list',$customers_list);
-    } 
+    }
+    /*Ajustes vendedor*/
+    public function actualizarV(Request $request){
+        $name = $request->input('name');
+        $lastname = $request->input('lastname');  
+        $email = $request->input('email');  
+        $dni = $request->input('dni');
+        $sexo = $request->input('sexo');
+        $phone = $request->input('phone');
+        $birthdate = $request->input('birthdate');
+        $cellphone = $request->input('cellphone');
+        $password = $request->input('password');
+        $passwordencriptada = bcrypt($password);
+        if($password == ""){
+            $actualizar = DB::UPDATE('UPDATE Users set name = :varname, lastname = :varlastname, email = :varcorreo,
+             sexo = :varsexo, phone = :varphone, cellphone = :varcellphone, birthdate = :varbirthdate
+            WHERE dni = :vardni',['varname' => $name,'varlastname' => $lastname,'varcorreo' => $email,'varcorreo' => $email,'varsexo' => $sexo,'varphone' => $phone,'varbirthdate' => $birthdate,'varcellphone' => $cellphone, 'vardni' =>$dni]);
+        }else{
+            $actualizar = DB::UPDATE('UPDATE Users set name = :varname, lastname = :varlastname, email = :varcorreo,
+             sexo = :varsexo, phone = :varphone, cellphone = :varcellphone, birthdate = :varbirthdate, password = :varpassword
+            WHERE dni = :vardni',['varname' => $name,'varlastname' => $lastname,'varcorreo' => $email,'varcorreo' => $email,'varsexo' => $sexo,'varphone' => $phone,'varbirthdate' => $birthdate,'varcellphone' => $cellphone,'varpassword' => $passwordencriptada, 'vardni' =>$dni]);
+        }
+        Auth::logout();
+        return redirect('/');
+    }
 }
 
 	

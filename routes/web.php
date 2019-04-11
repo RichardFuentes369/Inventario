@@ -64,6 +64,7 @@ Route::group(['prefix'=>'administrador'], function(){
 	Route::post('proveedoresA','ProvidersController@updateProvider');	
 	Route::get('proveedoresB/{id}', 'ProvidersController@deleteProvider')->where(['id' => '[0-9]+']);
 	Route::get('perfil','UserController@allpcu1');
+	Route::post('ajustesA','UserController@actualizarA');
 });
 
 Route::group(['prefix'=>'vendedor'], function(){	
@@ -86,5 +87,10 @@ Route::group(['prefix'=>'vendedor'], function(){
 	/*controladores*/
 	Route::get('perfil','UserController@allc2');
 	Route::get('clientes','CustomersController@allcustomersS');
-	Route::get('clientesB/{id}', 'CustomersController@deleteCustomer2')->where(['id' => '[0-9]+']);
+	Route::post('clientesC','CustomersController@createCustomersV');
+	Route::post('clientesA','CustomersController@updateCustomersV');
+	Route::get('clientesB/{id}', 'CustomersController@deleteCustomerV')->where(['id' => '[0-9]+']);
+	Route::post('ajustesV','UserController@actualizarV');
 });
+
+

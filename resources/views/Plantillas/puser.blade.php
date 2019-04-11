@@ -197,7 +197,7 @@
 							@endif
 					  	</div>
 					  </div>
-					  <div class="col-sm-12">
+					  <div class="col-sm-12 content">
 					  	@yield('content')
 					  </div>
 					</div>

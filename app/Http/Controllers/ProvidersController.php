@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class ProvidersController extends Controller
 {
-    /*ADMINISTRADOR*/
+    /****************************************************************ADMINISTRADOR****************************************************/
     /*Mostrar Todas los proveedores*/
     public function allproviders(){
     	$providers_list = DB::table('providers')->orderBy('id','asc')->paginate(10);

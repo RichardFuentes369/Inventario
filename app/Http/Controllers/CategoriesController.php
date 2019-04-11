@@ -10,7 +10,7 @@ use Auth;
 
 class CategoriesController extends Controller
 {
-	/*ADMINISTRADOR*/
+	/***************************************************ADMINISTRADOR*****************************************************************/
     /*Mostrar Todas las Categorias*/
     public function allCategory(){
     	$category_list = DB::table('categories')->orderBy('id','asc')->paginate(10);

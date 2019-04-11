@@ -5,6 +5,6 @@
 		<h3 align="left"><strong>Ajustes</strong></h3>
 	</div>
 	<hr>
-	@include('seller.form.form-ajustes')
+	@include('seller.form.form-settings')
 	<hr>
 @endsection

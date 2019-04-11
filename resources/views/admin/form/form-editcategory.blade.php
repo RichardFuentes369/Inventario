@@ -8,19 +8,19 @@
 						<div class="input-group-prepand">
 							<span class="input-group-text" id="basic-addon1">Id</span>
 						</div>
-						<textarea class="form-control" rows="1" name="id" id="aid" style="resize: none" readonly></textarea>
+						<textarea class="form-control inputcenter" rows="1" name="id" id="aid" style="resize: none" readonly></textarea>
 					</div>	
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Nombre de la categoria</span>
 						  </div>
-						<textarea class="form-control" rows="1" name="category_name" id="acn" style="resize: none"></textarea>
+						<textarea class="form-control inputcenter" rows="1" name="category_name" id="acn" style="resize: none"></textarea>
 					</div>
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Descripción</span>
 						</div>
-						<textarea class="form-control" rows="4" name="description" id="ad" style="resize: none" maxlength="255"></textarea>
+						<textarea class="form-control inputcenter" rows="4" name="description" id="ad" style="resize: none" maxlength="255"></textarea>
 					</div> 
 				</div>
 			</div>
