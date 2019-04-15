@@ -14,7 +14,7 @@ class CreateProvidersTable extends Migration
     public function up()
     {
         Schema::create('providers', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('nit')->nullable(); //nit del proveedor
             $table->string('business_name')->nullable(); //nombre de la empresa del proveedor
             $table->string('country')->nullable(); //pais de la empresa

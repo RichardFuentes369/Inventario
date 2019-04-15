@@ -14,7 +14,7 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('name')->nullable(); //nombre del producto
             $table->string('lote')->nullable(); //lote
             $table->date('manufacturing_date')->nullable(); //fecha de fabricacion

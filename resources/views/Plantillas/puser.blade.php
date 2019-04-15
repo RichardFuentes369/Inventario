@@ -44,8 +44,10 @@
 				<div class="col-sm-4"></div>
 			</div>
 		</div>
+		
+		<br>
 
-		<div class="text-white bg-dark">
+		<div class="text-white bg-dark" style="height: 50px">
 			<div class="container">
 				<div class="col-sm-12">
 					<div class="row">

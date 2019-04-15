@@ -14,7 +14,7 @@ class CreateCompaniesTable extends Migration
     public function up()
     {
         Schema::create('companies', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('business_name')->nullable(); //nombre de la compañia
             $table->string('address')->nullable(); //direccion de la compañia
             $table->string('country')->nullable(); //pais de la compañia
