@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('lote')->nullable(); //lote
             $table->date('manufacturing_date')->nullable(); //fecha de fabricacion
             $table->date('expiration_date')->nullable(); //fecha de vencimiento
+            $table->integer('quantity')->nullable();//cantidad
             $table->integer('category_id')->unsigned(); //referencia id a la tabla compañia
             $table->foreign('category_id') //llave foranea
                   ->references('id')

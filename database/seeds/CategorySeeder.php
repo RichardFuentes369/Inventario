@@ -51,5 +51,29 @@ class CategorySeeder extends Seeder
             'companies_id' => '1',
     	]);
         $category5->save();
+
+        $category6 = categories::create([
+            'id'    => 6,
+            'category_name' => 'Bebidas Alcoholocas',
+            'description' => 'Cervezas, Refajos',
+            'companies_id' => '1',
+        ]);
+        $category6->save();
+
+        $category7 = categories::create([
+            'id'    => 7,
+            'category_name' => 'Bebidas Refrescantes',
+            'description' => 'Gaseosas, Aguas, Energizantes',
+            'companies_id' => '1',
+        ]);
+        $category7->save();
+
+        $category8 = categories::create([
+            'id'    => 8,
+            'category_name' => 'Galletas y Pasabocas',
+            'description' => 'Todo tipo de galletas',
+            'companies_id' => '1',
+        ]);
+        $category8->save();
     }
 }

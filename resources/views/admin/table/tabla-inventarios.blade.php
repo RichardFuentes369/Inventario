@@ -3,28 +3,37 @@
     <tr>
       <th scope="col">#id</th>
       <th scope="col">Nombre de la categoria</th>
-      <th scope="col">Total Articulos</th>
-      <th scope="col">Opciónes</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Ver</th>
+      <th scope="col">Añadir</th>
     </tr>
   </thead>
   <tbody>
+    @foreach ($category_list_inventory as $cli)
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>15</td>
-      <td><button class="btn btn-primary botonfunciones"><i class="material-icons">visibility</i></button></td><!--Este boton permite ver los articulos que tiene esa categoria-->
+      <td id="id">{{ $cli -> category_id}}</td>
+      <td id="category_name">{{ $cli -> category_name}}</td>
+      <td id="cantidad">{{ $cli -> quantity}}</td>   
+      <td><form action="{{ url('administrador')}}/{{ 'inventariosV' }}/{{ $cli -> category_id}}"><button class="btn btn-primary botonfunciones"><i class="material-icons">visibility</i></button></form></td>
+      <td><button class="btn btn-success botonfunciones" data-toggle="modal" data-target="#myModal2"><i class="material-icons">add</i></button></td>   
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>25</td>
-      <td><button class="btn btn-primary botonfunciones"><i class="material-icons">visibility</i></button></td><!--Este boton permite ver los articulos que tiene esa categoria-->
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>30</td>
-      <td><button class="btn btn-primary botonfunciones"><i class="material-icons">visibility</i></button></td><!--Este boton permite ver los articulos que tiene esa categoria-->
-    </tr>
+    @endforeach
   </tbody>
 </table>
+
+{{ $category_list_inventory->links( "pagination::bootstrap-4") }}
+
+
+<div id="myModal2" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Añadir Producto</h4>
+        <button type="button" class="close" data-dismiss="modal" title="Cerrar">&times;</button>
+      </div>
+      <div class="modal-body">
+        @include('admin.form.form-addproduct')
+      </div>
+    </div>
+  </div>
+</div>

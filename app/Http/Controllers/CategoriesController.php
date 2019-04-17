@@ -59,5 +59,13 @@ class CategoriesController extends Controller
         Flash::error("Se ha eliminado el año con id " . $id . " de forma correcta");
         return redirect('administrador/categorias');
     }
+    /*Mostrar Todas las Categorias para hacer el inventario*/
+    public function allCategoryInventory(){
+        $category_list_inventory = categories::select('products.category_id as category_id','categories.category_name as category_name',DB::raw('count(*) as quantity'))
+            ->join('products','categories.id','=','products.category_id')->groupBy('category_id')->orderBy('category_id','asc')
+            ->paginate(10);
+        return view('admin.views.inventarios',compact('category_list_inventory'));
+    }
 }
+
 

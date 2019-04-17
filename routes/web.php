@@ -30,9 +30,6 @@ Route::group(['prefix'=>'administrador'], function(){
 	Route::get('bienvenidos', function(){
 		return view('admin.views.index');
 	});
-	Route::get('inventarios', function(){
-		return view('admin.views.inventarios');
-	});
 	Route::get('ingresos', function(){
 		return view('admin.views.ingresos');
 	});
@@ -51,6 +48,8 @@ Route::group(['prefix'=>'administrador'], function(){
 	Route::post('categoriasC','CategoriesController@createCategory');
 	Route::post('categoriasA','CategoriesController@updateCategory');
 	Route::get('categoriasB/{id}', 'CategoriesController@deleteCategory')->where(['id' => '[0-9]+']);
+	Route::get('inventarios','CategoriesController@allCategoryInventory');
+	Route::get('inventariosV/{id}','ProductsController@productsByCategory')->where(['id' => '[0-9]+']);
 	Route::get('empleados','UserController@allsellers');
 	Route::post('empleadosC','UserController@createSeller');
 	Route::post('empleadosA','UserController@updateSeller');

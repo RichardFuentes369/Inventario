@@ -202,7 +202,7 @@ class ProviderSeeder extends Seeder
         $provider12 = providers::create([
             'id'    => 12,
             'nit'   => '1-0000011',
-            'business_name' => 'Agula',
+            'business_name' => 'Aguila',
             'country' => 'Colombia',
             'department' => 'Santander',
             'county' => 'Bucaramanda',

@@ -7,11 +7,13 @@
 	</div>
 	<hr>
 		<center>
+			<br>	
 			<h2>Por tu seguridad y la de la empresa <br> recuerda siempre cerrar tu session <br> cuando no te encuentres frente a la monitor
 			</h2>
 			<form action="{{ url('index') }}/{{ ('Logout') }}">
 				<button class="btn btn-danger">Salir</button> <br><br>		
 			</form>
+			<br>	
 		</center>
 	<hr>
 	@else
