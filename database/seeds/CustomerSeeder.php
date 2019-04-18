@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use inventarios\customers;
+use inventarios\Customer;
 
 class CustomerSeeder extends Seeder
 {
@@ -12,7 +12,7 @@ class CustomerSeeder extends Seeder
      */
     public function run()
     {
-        $customer1 = customers::create([
+        $customer1 = Customer::create([
     	    'id'	=> 1,
         	'name'	=> 'Antonio José',
             'lastname' => 'Rodriguez Villabona',
@@ -31,7 +31,7 @@ class CustomerSeeder extends Seeder
     	]);
         $customer1->save();
 
-		$customer2 = customers::create([
+		$customer2 = Customer::create([
     	    'id'	=> 2,
         	'name'	=> 'Maria Carmen',
             'lastname' => 'Rodriguez Zapata',
@@ -50,7 +50,7 @@ class CustomerSeeder extends Seeder
     	]);
         $customer2->save();
 
-		$customer3 = customers::create([
+		$customer3 = Customer::create([
     	    'id'	=> 3,
         	'name'	=> 'Carmen Cecilia',
             'lastname' => 'Gomez Salamanca',
@@ -69,7 +69,7 @@ class CustomerSeeder extends Seeder
     	]);
         $customer3->save();
 
-		$customer4 = customers::create([
+		$customer4 = Customer::create([
     	    'id'	=> 4,
         	'name'	=> 'José Luís',
             'lastname' => 'Peralta Serrano',
@@ -88,7 +88,7 @@ class CustomerSeeder extends Seeder
     	]);
         $customer4->save();
 
-		$customer5 = customers::create([
+		$customer5 = Customer::create([
     	    'id'	=> 5,
         	'name'	=> 'Laura Cristina',
             'lastname' => 'Rubio Molina',

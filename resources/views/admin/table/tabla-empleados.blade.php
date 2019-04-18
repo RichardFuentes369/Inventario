@@ -5,9 +5,7 @@
       <th scope="col">Nombres</th>
       <th scope="col">Apellidos</th>
       <th scope="col">DNI</th>
-      <th scope="col">Ver</th>
-      <th scope="col">Actualizar</th>
-      <th scope="col">Eliminar</th>
+      <th scope="col" colspan="3">Opciónes</th>
     </tr>
   </thead>
   <tbody>

@@ -4,8 +4,7 @@
       <th scope="col">#id</th>
       <th scope="col">Nombre de la categoria</th>
       <th scope="col">Cantidad</th>
-      <th scope="col">Ver</th>
-      <th scope="col">Añadir</th>
+      <th scope="col" colspan="2">Opciónes</th>
     </tr>
   </thead>
   <tbody>
@@ -14,8 +13,8 @@
       <td id="id">{{ $cli -> category_id}}</td>
       <td id="category_name">{{ $cli -> category_name}}</td>
       <td id="cantidad">{{ $cli -> quantity}}</td>   
-      <td><form action="{{ url('administrador')}}/{{ 'inventariosV' }}/{{ $cli -> category_id}}"><button class="btn btn-primary botonfunciones"><i class="material-icons">visibility</i></button></form></td>
-      <td><button class="btn btn-success botonfunciones" data-toggle="modal" data-target="#myModal2"><i class="material-icons">add</i></button></td>   
+      <td><form action="{{ url('administrador')}}/{{ 'inventariosV' }}/{{ $cli -> category_id}}"><button class="btn btn-primary botonfunciones" title="ver"><i class="material-icons">visibility</i></button></form></td> 
+      <td><button class="btn btn-success botonfunciones" data-toggle="modal" data-target="#myModal2" onClick="seeData('{{ $cli -> category_id }}')" title="añadir"><i class="material-icons">add</i></button></td> 
     </tr>
     @endforeach
   </tbody>
@@ -37,3 +36,9 @@
     </div>
   </div>
 </div>
+
+<script>  
+  function seeData(id){
+    document.getElementById('aid').innerHTML = id;
+  }
+</script>

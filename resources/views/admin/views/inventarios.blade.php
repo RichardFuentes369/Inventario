@@ -2,7 +2,7 @@
 
 @section('content')
 	<div class="col-sm-12">
-		<h3 align="left"><strong>Inventario</strong></h3>
+		<h3 align="left"><strong>Inventario</strong></h3>	
 	</div>
 	<hr>  
 	<div class="col-sm-12">
@@ -16,4 +16,4 @@
     	</div>
   	</div>
 	<hr>
-@endsection
+@endsection 

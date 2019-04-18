@@ -5,8 +5,8 @@ namespace inventarios\Http\Controllers;
 use Auth;
 use inventarios\User;
 use Laracasts\Flash\Flash;  
-use inventarios\providers;
-use inventarios\customers;
+use inventarios\Provider;
+use inventarios\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -16,8 +16,8 @@ class UserController extends Controller
     /*Listar Proveedores, Empleados, Clientes*/
     public function allpcu1(){
     	$users_list = User::all();
-    	$providers_list = providers::all();
-    	$customers_list = customers::all();
+    	$providers_list = Provider::all();
+    	$customers_list = Customer::all();
     	return view('admin.views.perfil')->with('users_list',$users_list)->with('providers_list',$providers_list)->with('customers_list',$customers_list);
     }    
     /*Mostrar Todas los empleados*/
@@ -119,7 +119,7 @@ class UserController extends Controller
     /**************************************************************VENDEDOR**********************************************************/
     /*Clientes*/
     public function allc2(){
-        $customers_list = customers::all();
+        $customers_list = Customer::all();
         return view('seller.views.perfil')->with('customers_list',$customers_list);
     }
     /*Ajustes vendedor*/

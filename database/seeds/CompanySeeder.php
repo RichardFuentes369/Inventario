@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use inventarios\companies;
+use inventarios\Company;
 
-class CompaniSeeder extends Seeder
+class CompanySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,7 @@ class CompaniSeeder extends Seeder
      */
     public function run()
     {
-        $compani1 = companies::create([
+        $compani1 = Company::create([
     	    'id'	=> 1,
         	'business_name'	=> 'Solsientic SA',
             'address' => 'Calle 34 a no 36 - 125',

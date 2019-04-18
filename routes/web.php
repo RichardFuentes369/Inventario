@@ -48,8 +48,10 @@ Route::group(['prefix'=>'administrador'], function(){
 	Route::post('categoriasC','CategoriesController@createCategory');
 	Route::post('categoriasA','CategoriesController@updateCategory');
 	Route::get('categoriasB/{id}', 'CategoriesController@deleteCategory')->where(['id' => '[0-9]+']);
-	Route::get('inventarios','CategoriesController@allCategoryInventory');
-	Route::get('inventariosV/{id}','ProductsController@productsByCategory')->where(['id' => '[0-9]+']);
+	Route::get('inventarios','CategoriesController@allCategoryInventoryA');
+	Route::get('inventariosV/{id}','ProductsController@productsByCategoryA')->where(['id' => '[0-9]+']);
+	Route::post('productosC','ProductsController@createProduct');
+	Route::post('productosA','ProductsController@updateProduct');
 	Route::get('empleados','UserController@allsellers');
 	Route::post('empleadosC','UserController@createSeller');
 	Route::post('empleadosA','UserController@updateSeller');
@@ -89,6 +91,8 @@ Route::group(['prefix'=>'vendedor'], function(){
 	Route::post('clientesC','CustomersController@createCustomersV');
 	Route::post('clientesA','CustomersController@updateCustomersV');
 	Route::get('clientesB/{id}', 'CustomersController@deleteCustomerV')->where(['id' => '[0-9]+']);
+	Route::get('inventarios','CategoriesController@allCategoryInventoryV');
+	Route::get('inventariosV/{id}','ProductsController@productsByCategoryV')->where(['id' => '[0-9]+']);
 	Route::post('ajustesV','UserController@actualizarV');
 });
 

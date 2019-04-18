@@ -7,16 +7,18 @@
 						{{ $cn -> category_name}}
 					@endforeach</strong>
 		</h3>
+		<marquee>Si por alguna razón el proveedor quedo mal ingresado, debes eliminar el producto y volverlo a incluir</marquee>
 	</div>
 	<hr>  
 	<div class="col-sm-12">
     	<div class="row">
-      		<div class="col-sm-12"> 
-				@include('flash::message')	
-      			@include('admin.table.tabla-productos')
+      		<div class="col-sm-1"></div>
+      		<div class="col-sm-10"> 
+      			@include('seller.table.tabla-productos')
 		  </div>
+      	<div class="col-sm-1"></div> 
     	</div>
-		<form action="{{ url('administrador')}}/{{'inventarios'}}" method="Get">
+		<form action="{{ url('vendedor')}}/{{'inventarios'}}" method="Get">
 			<button class="btn btn-link btn-sm" title="Volver">
 				<i class="material-icons">undo</i>
 			</button>

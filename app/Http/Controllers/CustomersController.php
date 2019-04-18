@@ -3,7 +3,7 @@
 namespace inventarios\Http\Controllers;
 
 use Auth;
-use inventarios\customers;
+use inventarios\Customer;
 use Laracasts\Flash\Flash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -97,7 +97,7 @@ class CustomersController extends Controller
         }
         $existe = DB::SELECT('SELECT * FROM customers WHERE dni = :vardni',['vardni' => $dni]);
         if($existe == false){
-            $c = new customers();
+            $c = new Customer();
             if($ultimo_id == null){
                 $c->id == 1;
             }else{

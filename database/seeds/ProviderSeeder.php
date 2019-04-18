@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use inventarios\providers;
+use inventarios\Provider;
 
 class ProviderSeeder extends Seeder
 {
@@ -12,7 +12,7 @@ class ProviderSeeder extends Seeder
      */
     public function run()
     {
-        $provider1 = providers::create([
+        $provider1 = Provider::create([
     	    'id'	=> 1,
         	'nit'	=> '1-0000000',
             'business_name' => 'Dersa',
@@ -29,7 +29,7 @@ class ProviderSeeder extends Seeder
     	]);
         $provider1->save();
 
-        $provider2 = providers::create([
+        $provider2 = Provider::create([
     	    'id'	=> 2,
         	'nit'	=> '1-0000001',
             'business_name' => 'Tigre',
@@ -46,7 +46,7 @@ class ProviderSeeder extends Seeder
     	]);
         $provider2->save();
 
-        $provider3 = providers::create([
+        $provider3 = Provider::create([
     	    'id'	=> 3,
         	'nit'	=> '1-0000002',
             'business_name' => 'Wash',
@@ -63,7 +63,7 @@ class ProviderSeeder extends Seeder
     	]);
         $provider3->save();
 
-        $provider4 = providers::create([
+        $provider4 = Provider::create([
     	    'id'	=> 4,
         	'nit'	=> '1-0000003',
             'business_name' => 'Colgate',
@@ -80,7 +80,7 @@ class ProviderSeeder extends Seeder
     	]);
         $provider4->save();
 
-        $provider5 = providers::create([
+        $provider5 = Provider::create([
     	    'id'	=> 5,
         	'nit'	=> '1-0000004',
             'business_name' => 'Ego',
@@ -97,7 +97,7 @@ class ProviderSeeder extends Seeder
     	]);
         $provider5->save();
 
-        $provider6 = providers::create([
+        $provider6 = Provider::create([
             'id'    => 6,
             'nit'   => '1-0000005',
             'business_name' => 'Jhonson & Jhonson',
@@ -114,7 +114,7 @@ class ProviderSeeder extends Seeder
         ]);
         $provider6->save();
 
-        $provider7 = providers::create([
+        $provider7 = Provider::create([
             'id'    => 7,
             'nit'   => '1-0000006',
             'business_name' => 'Ebel',
@@ -131,7 +131,7 @@ class ProviderSeeder extends Seeder
         ]);
         $provider7->save();
 
-        $provider8 = providers::create([
+        $provider8 = Provider::create([
             'id'    => 8,
             'nit'   => '1-0000007',
             'business_name' => 'Savital',
@@ -148,7 +148,7 @@ class ProviderSeeder extends Seeder
         ]);
         $provider8->save();
 
-        $provider9 = providers::create([
+        $provider9 = Provider::create([
             'id'    => 9,
             'nit'   => '1-0000008',
             'business_name' => 'Ducales',
@@ -165,7 +165,7 @@ class ProviderSeeder extends Seeder
         ]);
         $provider9->save();
 
-        $provider10 = providers::create([
+        $provider10 = Provider::create([
             'id'    => 10,
             'nit'   => '1-0000009',
             'business_name' => 'Festival',
@@ -182,7 +182,7 @@ class ProviderSeeder extends Seeder
         ]);
         $provider10->save();
 
-        $provider11 = providers::create([
+        $provider11 = Provider::create([
             'id'    => 11,
             'nit'   => '1-0000010',
             'business_name' => 'Coca-Cola',
@@ -199,7 +199,7 @@ class ProviderSeeder extends Seeder
         ]);
         $provider11->save();
 
-        $provider12 = providers::create([
+        $provider12 = Provider::create([
             'id'    => 12,
             'nit'   => '1-0000011',
             'business_name' => 'Aguila',
@@ -216,7 +216,7 @@ class ProviderSeeder extends Seeder
         ]);
         $provider12->save();
 
-        $provider13 = providers::create([
+        $provider13 = Provider::create([
             'id'    => 13,
             'nit'   => '1-0000012',
             'business_name' => 'Pepsi',

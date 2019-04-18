@@ -4,13 +4,14 @@ namespace inventarios\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use inventarios\categories;
+use inventarios\Category;
+use inventarios\Provider;
 use Laracasts\Flash\Flash;	
 use Auth;
 
 class CategoriesController extends Controller
 {
-	/***************************************************ADMINISTRADOR*****************************************************************/
+	/***************************************************ADMINISTRADOR**************************************************/
     /*Mostrar Todas las Categorias*/
     public function allCategory(){
     	$category_list = DB::table('categories')->orderBy('id','asc')->paginate(10);
@@ -60,12 +61,23 @@ class CategoriesController extends Controller
         return redirect('administrador/categorias');
     }
     /*Mostrar Todas las Categorias para hacer el inventario*/
-    public function allCategoryInventory(){
-        $category_list_inventory = categories::select('products.category_id as category_id','categories.category_name as category_name',DB::raw('count(*) as quantity'))
+    public function allCategoryInventoryA(){
+        $category_list_inventory = Category::select('products.category_id as category_id','categories.category_name as category_name',DB::raw('count(*) as quantity'))
             ->join('products','categories.id','=','products.category_id')->groupBy('category_id')->orderBy('category_id','asc')
             ->paginate(10);
-        return view('admin.views.inventarios',compact('category_list_inventory'));
+        $provider = Provider::all();
+        return view('admin.views.inventarios',compact('category_list_inventory'))->with('provider',$provider);
+    }
+    /***************************************************VENDEDOR**************************************************/
+    /*Mostrar Todas las Categorias para hacer el inventario*/
+    public function allCategoryInventoryV(){
+        $category_list_inventory = Category::select('products.category_id as category_id','categories.category_name as category_name',DB::raw('count(*) as quantity'))
+            ->join('products','categories.id','=','products.category_id')->groupBy('category_id')->orderBy('category_id','asc')
+            ->paginate(10);
+        return view('seller.views.inventarios',compact('category_list_inventory'));
     }
 }
+
+
 
 

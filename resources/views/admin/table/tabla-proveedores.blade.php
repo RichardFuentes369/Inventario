@@ -4,9 +4,7 @@
       <th scope="col">#id</th>
       <th scope="col">NIT</th>
       <th scope="col">Nombre del Proveedor</th>
-      <th scope="col">Ver</th>
-      <th scope="col">Actualizar</th>
-      <th scope="col">Eliminar</th>
+      <th scope="col" colspan="3">Opciónes</th>
     </tr>
   </thead>
   <tbody>

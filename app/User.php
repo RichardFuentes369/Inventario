@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'id','name','lastname','email','birthdate','dni','sexo','category','phone','cellphone','colegio_id'
+        'id','name','lastname','email','birthdate','dni','sexo','category','phone','cellphone','companies_id'
     ];
 
     /**
@@ -30,8 +30,8 @@ class User extends Authenticatable
     /**
      * De companies a usuarios
      */
-    public function companies(){
-        return $this->belongsTo('inventarios\companies', 'companies_id');
+    public function company(){
+        return $this->belongsTo(Company::class, 'companies_id');
     }
 
 }

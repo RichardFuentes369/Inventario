@@ -4,7 +4,7 @@ namespace inventarios;
 
 use Illuminate\Database\Eloquent\Model;
 
-class customers extends Model
+class Category extends Model
 {
     //
 }

@@ -2,7 +2,7 @@
 
 namespace inventarios\Http\Controllers;
 
-use inventarios\providers;
+use inventarios\Provider;
 use Laracasts\Flash\Flash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;

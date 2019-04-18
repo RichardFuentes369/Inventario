@@ -1,30 +1,23 @@
 <table border="0" class="table table-responsive table-hover" style="text-align: center">
   <thead class="tableth">
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">#id</th>
       <th scope="col">Nombre de la categoria</th>
-      <th scope="col">Total Articulos</th>
-      <th scope="col">Opciónes</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Ver</th>
     </tr>
   </thead>
   <tbody>
+    @foreach ($category_list_inventory as $cli)
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>15</td>
-      <td><button class="btn btn-primary botonfunciones"><i class="material-icons">visibility</i></button></td><!--Este boton permite ver los articulos que tiene esa categoria-->
+      <td id="id">{{ $cli -> category_id}}</td>
+      <td id="category_name">{{ $cli -> category_name}}</td>
+      <td id="cantidad">{{ $cli -> quantity}}</td>   
+      <td><form action="{{ url('vendedor')}}/{{ 'inventariosV' }}/{{ $cli -> category_id}}"><button class="btn btn-primary botonfunciones"><i class="material-icons">visibility</i></button></form></td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>25</td>
-      <td><button class="btn btn-primary botonfunciones"><i class="material-icons">visibility</i></button></td><!--Este boton permite ver los articulos que tiene esa categoria-->
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>30</td>
-      <td><button class="btn btn-primary botonfunciones"><i class="material-icons">visibility</i></button></td><!--Este boton permite ver los articulos que tiene esa categoria-->
-    </tr>
+    @endforeach
   </tbody>
 </table>
+
+{{ $category_list_inventory->links( "pagination::bootstrap-4") }}
+

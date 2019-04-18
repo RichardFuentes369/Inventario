@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use inventarios\products;
+use inventarios\Product;
 
-class ProductsSeeder extends Seeder
+class ProductSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,7 @@ class ProductsSeeder extends Seeder
      */
     public function run()
     {
-        $product1 = products::create([
+         $product1 = Product::create([
         	'id' => 1,
 			'name' => 'Jabon en polvo, olor a frutas',
 			'lote' => '000000001',
@@ -24,7 +24,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product1->save();
 
-        $product2 = products::create([
+        $product2 = Product::create([
         	'id' => 2,
 			'name' => 'Jabon en polvo, olor a lavanda',
 			'lote' => '000000001',
@@ -36,7 +36,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product2->save();
 
-        $product3 = products::create([
+        $product3 = Product::create([
         	'id' => 3,
 			'name' => 'Jabon en polvo, olor a tierra',
 			'lote' => '000000001',
@@ -48,7 +48,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product3->save();
 
-        $product4 = products::create([
+        $product4 = Product::create([
         	'id' => 4,
 			'name' => 'Crema triple acción Colgate',
 			'lote' => '000000001',
@@ -60,7 +60,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product4->save();
 
-        $product5 = products::create([
+        $product5 = Product::create([
         	'id' => 5,
 			'name' => 'Crema con cristales refrescantes Colgate',
 			'lote' => '000000001',
@@ -72,7 +72,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product5->save();
 
-        $product6 = products::create([
+        $product6 = Product::create([
         	'id' => 6,
 			'name' => 'Shampoo Ego para hombres',
 			'lote' => '000000001',
@@ -84,7 +84,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product6->save();
 
-        $product7 = products::create([
+        $product7 = Product::create([
         	'id' => 7,
 			'name' => 'Shampoo Ego para niños y niñas',
 			'lote' => '000000001',
@@ -96,7 +96,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product7->save();
 
-        $product8 = products::create([
+        $product8 = Product::create([
         	'id' => 8,
 			'name' => 'Shampoo Savital rubios aclarates',
 			'lote' => '000000001',
@@ -108,7 +108,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product8->save();
 
-        $product9 = products::create([
+        $product9 = Product::create([
         	'id' => 9,
 			'name' => 'Jabon en polvo, olor a frutas',
 			'lote' => '000000001',
@@ -120,7 +120,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product9->save();
 
-        $product11 = products::create([
+        $product11 = Product::create([
         	'id' => 11,
 			'name' => 'Jabon en polvo, olor a frutas',
 			'lote' => '000000001',
@@ -132,7 +132,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product11->save();
 
-        $product12 = products::create([
+        $product12 = Product::create([
         	'id' => 12,
 			'name' => 'Jabon en polvo, olor a frutas',
 			'lote' => '000000001',
@@ -144,7 +144,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product12->save();
 
-        $product13 = products::create([
+        $product13 = Product::create([
         	'id' => 13,
 			'name' => 'Jabon en polvo, olor a frutas',
 			'lote' => '000000001',
@@ -156,7 +156,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product13->save();
 
-        $product14 = products::create([
+        $product14 = Product::create([
         	'id' => 14,
 			'name' => 'Jabon en polvo, olor a frutas',
 			'lote' => '000000001',
@@ -168,7 +168,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product14->save();
 
-        $product15 = products::create([
+        $product15 = Product::create([
         	'id' => 15,
 			'name' => 'Aguila en lata',
 			'lote' => '000000001',
@@ -180,7 +180,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product15->save();
 
-        $product16 = products::create([
+        $product16 = Product::create([
         	'id' => 16,
 			'name' => 'Aguila Light en lata',
 			'lote' => '000000001',
@@ -192,7 +192,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product16->save();
 
-        $product17 = products::create([
+        $product17 = Product::create([
         	'id' => 17,
 			'name' => 'Aguila sin alcohol en lata',
 			'lote' => '000000001',
@@ -204,7 +204,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product17->save();
 
-        $product18 = products::create([
+        $product18 = Product::create([
         	'id' => 18,
 			'name' => 'Pepsi',
 			'lote' => '000000001',
@@ -216,7 +216,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product18->save();
 
-        $product19 = products::create([
+        $product19 = Product::create([
         	'id' => 19,
 			'name' => 'Galletas Festival sabor a limon',
 			'lote' => '000000001',
@@ -228,7 +228,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product19->save();
 
-        $product20 = products::create([
+        $product20 = Product::create([
         	'id' => 20,
 			'name' => 'Galletas Festival sabor a chocolate',
 			'lote' => '000000001',
@@ -240,7 +240,7 @@ class ProductsSeeder extends Seeder
     	]);
         $product20->save();
 
-        $product21 = products::create([
+        $product21 = Product::create([
         	'id' => 21,
 			'name' => 'Galletas Festival sabor a vainilla',
 			'lote' => '000000001',
@@ -253,5 +253,3 @@ class ProductsSeeder extends Seeder
         $product21->save();
     }
 }
-
-

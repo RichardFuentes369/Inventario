@@ -4,8 +4,7 @@
       <th scope="col">#id</th>
       <th scope="col">Nombre de la categoria</th>
       <th scope="col">Descripción</th>
-      <th scope="col">Actualizar</th>
-      <th scope="col">Eliminar</th>
+      <th scope="col" colspan="2">Opciónes</th>
     </tr>
   </thead>
   <tbody>
@@ -14,9 +13,9 @@
       <td id="id">{{ $cl ->  id}}</td>
       <td id="category_name">{{ $cl ->  category_name}}</td>
       <td id="description">{{ $cl -> description }}</td>
-      <td><button class="btn btn-warning botonfunciones" data-toggle="modal" data-target="#myModal2" onClick="seeData('{{ $cl -> id }}','{{ $cl -> category_name }}','{{ $cl -> description }}')"><i class="material-icons">update</i></button></td>
+      <td><button class="btn btn-warning botonfunciones" data-toggle="modal" data-target="#myModal2" onClick="seeData('{{ $cl -> id }}','{{ $cl -> category_name }}','{{ $cl -> description }}')" title="actualizar"><i class="material-icons">update</i></button></td>
       <td><form action="{{ url('administrador') }}/{{ 'categoriasB' }}/{{ $cl -> id }}" method="Get">
-        <button class="btn btn-danger botonfunciones" onClick="javascript: return confirm('¿Esta segudo que desea eliminar la categoria con ID {{ $cl -> id }}?');"><i class="material-icons">delete_forever</i></button></form></td>
+        <button class="btn btn-danger botonfunciones" onClick="javascript: return confirm('¿Esta segudo que desea eliminar la categoria con ID {{ $cl -> id }}?');" title="eliminar"><i class="material-icons">delete_forever</i></button></form></td>
     </tr>
     @endforeach
   </tbody>

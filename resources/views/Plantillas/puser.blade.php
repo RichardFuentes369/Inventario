@@ -94,7 +94,7 @@
 						  			@endif
 						  		</div>
 						  		<div class="col-sm-6" align="right">
-						  		    <label for="login"><b>{{ Auth::user()->companies->business_name }}</b></label><br>
+						  		    <label for="login"><b>{{ Auth::user()->company->business_name }}</b></label><br>
 						  		</div>
 						  	</div>				  		
 					  	</div>

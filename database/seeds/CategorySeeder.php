@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use inventarios\categories;
+use inventarios\Category;
 
 class CategorySeeder extends Seeder
 {
@@ -12,7 +12,7 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        $category1 = categories::create([
+         $category1 = Category::create([
     	    'id'	=> 1,
         	'category_name'	=> 'Jabones en polvo',
             'description' => 'Jabones en polvo',
@@ -20,7 +20,7 @@ class CategorySeeder extends Seeder
     	]);
         $category1->save();
 
-        $category2 = categories::create([
+        $category2 = Category::create([
     	    'id'	=> 2,
         	'category_name'	=> 'Jabones en barra',
             'description' => 'Jabones en barra (personal y domestico)',
@@ -28,7 +28,7 @@ class CategorySeeder extends Seeder
     	]);
         $category2->save();
 
-        $category3 = categories::create([
+        $category3 = Category::create([
     	    'id'	=> 3,
         	'category_name'	=> 'Jabones liquidos',
             'description' => 'Jabones para uso diario',
@@ -36,7 +36,7 @@ class CategorySeeder extends Seeder
     	]);
         $category3->save();
 
-        $category4 = categories::create([
+        $category4 = Category::create([
     	    'id'	=> 4,
         	'category_name'	=> 'Crema de dientes',
             'description' => 'Cremas de dientes de todo tipo',
@@ -44,7 +44,7 @@ class CategorySeeder extends Seeder
     	]);
         $category4->save();
 
-        $category5 = categories::create([
+        $category5 = Category::create([
     	    'id'	=> 5,
         	'category_name'	=> 'Shampoo',
             'description' => 'Shampoo para hombre y mujer',
@@ -52,7 +52,7 @@ class CategorySeeder extends Seeder
     	]);
         $category5->save();
 
-        $category6 = categories::create([
+        $category6 = Category::create([
             'id'    => 6,
             'category_name' => 'Bebidas Alcoholocas',
             'description' => 'Cervezas, Refajos',
@@ -60,7 +60,7 @@ class CategorySeeder extends Seeder
         ]);
         $category6->save();
 
-        $category7 = categories::create([
+        $category7 = Category::create([
             'id'    => 7,
             'category_name' => 'Bebidas Refrescantes',
             'description' => 'Gaseosas, Aguas, Energizantes',
@@ -68,7 +68,7 @@ class CategorySeeder extends Seeder
         ]);
         $category7->save();
 
-        $category8 = categories::create([
+        $category8 = Category::create([
             'id'    => 8,
             'category_name' => 'Galletas y Pasabocas',
             'description' => 'Todo tipo de galletas',
@@ -77,3 +77,4 @@ class CategorySeeder extends Seeder
         $category8->save();
     }
 }
+
