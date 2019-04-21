@@ -2,7 +2,7 @@
 
 @section('content')
 	<div class="col-sm-12">
-		<h3 align="left"><strong>Ventas</strong></h3>
-	</div>
-	<hr>
+    <h3 align="left"><strong>Facturar</strong></h3>
+  </div>
+  <hr>
 @endsection

@@ -17,7 +17,7 @@
 	
 	@if(Auth::check() == false)
 		<div class="banner">
-			<div class="col-sm-12 navbar navbar-dark bg-dark"> 
+			<div class="col-sm-12 navbar navbar-dark btop"> 
 	  			<a class="navbar-brand font-tittle" href="{{ url('index') }}/{{ 'bienvenidos' }}">INVENTARIO</a>
 	  			<div class="information">
 	  				Richard Fuentes<br>
@@ -26,36 +26,34 @@
 			</div>
 		</div>
 
+		<div class="social-networks">
+			<div class="col-sm-12" align="right">
+				<br>
+				<a href="https://www.facebook.com/enespanol/" class="btn btn-primary" target="_blank" title="Facebook"><i class="fa fa-facebook-official"></i></a>
+				<a href="https://twitter.com/TwitterLatAm?lang=es" class="btn btn-info" target="_blank" title="Twitter"><i class="fa fa-twitter-square"></i></a>
+				<a href="https://www.youtube.com/" class="btn btn-danger" target="_blank" title="Youtube"><i class="fa fa-youtube-play"></i></a>
+				<a href="https://www.linkedin.com/" class="btn btn-primary" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+			</div>
+		</div>
+	
 		<div class="col-sm-12">
 			<div class="row">
-				<div class="col-sm-4"></div>
-				<div class="col-sm-4">
-					<br><br><br><br><br>
+				<div class="container">
+					<br><br><br><br><br><br>
 					@yield('content')
-					<br><br><br><br><br>
+					<br><br><br><br><br><br>
 				</div>
-				<div class="col-sm-4" align="right">
-					<br>
-					<a href="https://www.facebook.com/enespanol/" class="btn btn-primary" target="_blank" title="Facebook"><i class="fa fa-facebook-official"></i></a>
-					<a href="https://twitter.com/TwitterLatAm?lang=es" class="btn btn-info" target="_blank" title="Twitter"><i class="fa fa-twitter-square"></i></a>
-					<a href="https://www.youtube.com/" class="btn btn-danger" target="_blank" title="Youtube"><i class="fa fa-youtube-play"></i></a>
-					<a href="https://www.linkedin.com/" class="btn btn-primary" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-				</div>
-				<div class="col-sm-4"></div>
 			</div>
 		</div>
 		
 		<br>
 
-		<div class="text-white bg-dark" style="height: 50px">
+		<div class="text-white bfoot" style="height: 50px">
 			<div class="container">
 				<div class="col-sm-12">
 					<div class="row">
-						<div class="col-sm-2" align="left" style="font-size: 10px">Inventario © 2019</div>
-						<div class="col-sm-8" align="center" style="font-size: 10px">
-							<br>Desarrollado por <br> Javier Ricardo Baron Fuentes
-						</div>
-						<div class="col-sm-2" align="right" style="font-size: 10px">
+						<div class="col-sm-2" align="left" style="font-size: 10px; color: black">Inventario © 2019</div>
+						<div class="col-sm-10" align="right" style="font-size: 10px; color: black">
 							Todos los derechos reservados
 						</div>
 					</div>
@@ -64,7 +62,7 @@
 		</div>
 	@else
 		<div class="banner">
-			<div class="col-sm-12 navbar navbar-dark bg-dark"> 
+			<div class="col-sm-12 navbar navbar-dark btop"> 
 				@if(Auth::user()->category == 'admin')
 		  		<a class="navbar-brand font-tittle" href="{{ url('administrador') }}/{{ 'perfil' }}">INVENTARIO</a>
 		  		@else
@@ -136,7 +134,10 @@
 								        		<a class="nav-link" href="{{ url('administrador') }}/{{ 'clientes' }}">Clientes</a>
 								           		<a class="nav-link" href="{{ url('administrador') }}/{{ 'proveedores' }}">Proveedores</a>
 								        	</div>
-								      	</li>
+								      	</li>					      	
+      									<li class="nav-item">
+      										<a class="nav-link" href="{{ url('administrador') }}/{{ 'facturar' }}">Facturar</a>
+      									</li>
 								      	<li class="nav-item dropdown">
 								        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								          	Movimientos
@@ -146,7 +147,7 @@
 								          		<a class="dropdown-item" href="{{ url('administrador') }}/{{ 'gastos' }}">Gastos</a>
 								          		<a class="dropdown-item" href="{{ url('administrador') }}/{{ 'costos' }}">Costos</a>
 								        	</div>
-								      	</li>
+								      	</li>	
 								    </ul>
 								</div>
 							</nav>
@@ -183,16 +184,9 @@
 									        	<a class="nav-link" href="{{ url('vendedor') }}/{{ 'inventarios' }}">Inventario</a>
 								        	</div>
 								      	</li>
-								      	<li class="nav-item dropdown">
-								        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								          	Movimientos
-								        	</a>
-								        	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								          		<a class="dropdown-item" href="{{ url('vendedor') }}/{{ 'devoluciones' }}">Devoluciones</a>
-								          		<a class="dropdown-item" href="{{ url('vendedor') }}/{{ 'ventas' }}">Ventas</a>
-								          		<a class="dropdown-item" href="{{ url('vendedor') }}/{{ 'gastos' }}">Gastos</a>
-								        	</div>
-								      	</li>
+     									<li class="nav-item">
+								          	<a class="nav-link" href="{{ url('vendedor') }}/{{ 'facturar' }}">Facturar</a>
+										</li>
 								    </ul>
 								</div>
 							</nav>
@@ -210,15 +204,13 @@
 		
 		<br>
 		
-		<div class="text-white bg-dark">
+		<div class="text-white bfoot">
 			<div class="container">
 				<div class="col-sm-12">
 					<div class="row">
-						<div class="col-sm-2" align="left" style="font-size: 10px">Inventario © 2019</div>
-						<div class="col-sm-7" align="center" style="font-size: 10px">
-							<br><br>Desarrollado por <br> Javier Ricardo Baron Fuentes
-						</div>
-						<div class="col-sm-3" align="right" style="font-size: 10px">
+						<div class="col-sm-2" align="left" style="font-size: 10px; color: black"><br><br>Inventario © 2019<br>Bucaramanga-Santander<br></div>
+						
+						<div class="col-sm-10" align="right" style="font-size: 10px; color: black">
 							Todos los derechos reservados
 							<br><br>
 							<a href="https://www.facebook.com/enespanol/" class="btn btn-primary" target="_blank" title="Facebook"><i class="fa fa-facebook-official"></i></a>

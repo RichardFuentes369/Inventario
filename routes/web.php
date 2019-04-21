@@ -41,6 +41,9 @@ Route::group(['prefix'=>'administrador'], function(){
 	});
 	Route::get('ajustes', function(){
 		return view('admin.views.ajustes');
+	});	
+	Route::get('facturar', function(){
+		return view('admin.views.facturar');
 	});
 
 	/*controladores*/
@@ -64,6 +67,7 @@ Route::group(['prefix'=>'administrador'], function(){
 	Route::post('proveedoresC','ProvidersController@createProvider');
 	Route::post('proveedoresA','ProvidersController@updateProvider');	
 	Route::get('proveedoresB/{id}', 'ProvidersController@deleteProvider')->where(['id' => '[0-9]+']);
+	Route::geT('facturarD','InvoicesController@desingA');
 	Route::get('perfil','UserController@allpcu1');
 	Route::post('ajustesA','UserController@actualizarA');
 });
@@ -76,14 +80,8 @@ Route::group(['prefix'=>'vendedor'], function(){
 	Route::get('inventarios', function(){
 		return view('seller.views.inventarios');
 	});
-	Route::get('devoluciones', function(){
-		return view('seller.views.devoluciones');
-	});
-	Route::get('ventas', function(){
-		return view('seller.views.ventas');
-	});
-	Route::get('gastos', function(){
-		return view('seller.views.gastos');
+	Route::get('facturar', function(){
+		return view('seller.views.facturar');
 	});
 	/*controladores*/
 	Route::get('perfil','UserController@allc2');
