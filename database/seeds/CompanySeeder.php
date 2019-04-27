@@ -14,6 +14,7 @@ class CompanySeeder extends Seeder
     {
         $compani1 = Company::create([
     	    'id'	=> 1,
+            'nit' => '3-5896-336',
         	'business_name'	=> 'Solsientic SA',
             'address' => 'Calle 34 a no 36 - 125',
             'country' => 'Colombia',

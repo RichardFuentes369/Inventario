@@ -15,6 +15,7 @@ class CreateCompaniesTable extends Migration
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nit');
             $table->string('business_name')->nullable(); //nombre de la compañia
             $table->string('address')->nullable(); //direccion de la compañia
             $table->string('country')->nullable(); //pais de la compañia

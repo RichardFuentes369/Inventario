@@ -42,9 +42,6 @@ Route::group(['prefix'=>'administrador'], function(){
 	Route::get('ajustes', function(){
 		return view('admin.views.ajustes');
 	});	
-	Route::get('facturar', function(){
-		return view('admin.views.facturar');
-	});
 
 	/*controladores*/
 	Route::get('categorias','CategoriesController@allCategory');
@@ -67,7 +64,7 @@ Route::group(['prefix'=>'administrador'], function(){
 	Route::post('proveedoresC','ProvidersController@createProvider');
 	Route::post('proveedoresA','ProvidersController@updateProvider');	
 	Route::get('proveedoresB/{id}', 'ProvidersController@deleteProvider')->where(['id' => '[0-9]+']);
-	Route::geT('facturarD','InvoicesController@desingA');
+	Route::get('facturarD','InvoicesController@desingA');
 	Route::get('perfil','UserController@allpcu1');
 	Route::post('ajustesA','UserController@actualizarA');
 });
