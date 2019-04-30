@@ -7,6 +7,7 @@ use inventarios\User;
 use Laracasts\Flash\Flash;  
 use inventarios\Provider;
 use inventarios\Customer;
+use inventarios\Company;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -54,7 +55,7 @@ class UserController extends Controller
             $u->neighborhood = $request->input('neighborhood');
             $u->email = $request->input('email');
             $u->category = "seller";
-            $u->companies_id = Auth::user()->companies->id;
+            $u->companies_id = Auth::user()->company->id;
             $u->save();
             Flash::success("Se ha registrado el empleado: ".$u->name." ".$u->lastname   . " de forma correcta");
             return redirect('administrador/empleados');

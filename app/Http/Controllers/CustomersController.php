@@ -26,7 +26,7 @@ class CustomersController extends Controller
         }
         $existe = DB::SELECT('SELECT * FROM customers WHERE dni = :vardni',['vardni' => $dni]);
         if($existe == false){
-            $c = new customers();
+            $c = new Customer();
             if($ultimo_id == null){
                 $c->id == 1;
             }else{
@@ -45,7 +45,7 @@ class CustomersController extends Controller
             $c->county = $request->input('county');
             $c->neighborhood = $request->input('neighborhood');
             $c->email = $request->input('email');
-            $c->companies_id = Auth::user()->companies->id;
+            $c->companies_id = Auth::user()->company->id;
             $c->save();
             Flash::success("Se ha registrado el cliente: ".$c->name." ".$c->lastname   . " de forma correcta");
             return redirect('administrador/clientes');

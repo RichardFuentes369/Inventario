@@ -38,6 +38,9 @@
 	</div>
 	<hr>
 	<div class="col-sm-12">
+		<div class="" align="right">
+			<button class="btn btn-success botonfunciones" title="Añadir Producto" onclick="productos()"><i class="material-icons">add</i></button>
+		</div><br>
 		@include('admin.table.tabla-crearfactura')
 	</div>
 	<div class="col-sm-12">
@@ -59,4 +62,9 @@
 			document.getElementById('showId').value="";	
 		}
 	}
+
+	function productos(){ 
+	  	alert('agregar columna');
+	}
 </script>
+

@@ -15,7 +15,7 @@
       <td id="description">{{ $cl -> description }}</td>
       <td><button class="btn btn-warning botonfunciones" data-toggle="modal" data-target="#myModal2" onClick="seeData('{{ $cl -> id }}','{{ $cl -> category_name }}','{{ $cl -> description }}')" title="actualizar"><i class="material-icons">update</i></button></td>
       <td><form action="{{ url('administrador') }}/{{ 'categoriasB' }}/{{ $cl -> id }}" method="Get">
-        <button class="btn btn-danger botonfunciones" onClick="javascript: return confirm('¿Esta segudo que desea eliminar la categoria con ID {{ $cl -> id }}?');" title="eliminar"><i class="material-icons">delete_forever</i></button></form></td>
+        <button class="btn btn-danger botonfunciones" onClick="javascript: return confirm('¿Esta segudo que desea eliminar la categoria con ID {{ $cl -> id }}?, Recuerde que al eliminar esta categoria, elimina también los productos que pertenecen a esta');" title="eliminar"><i class="material-icons">delete_forever</i></button></form></td>
     </tr>
     @endforeach
   </tbody>

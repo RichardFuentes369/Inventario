@@ -54,7 +54,7 @@ class CategorySeeder extends Seeder
 
         $category6 = Category::create([
             'id'    => 6,
-            'category_name' => 'Bebidas Alcoholocas',
+            'category_name' => 'Bebidas Alcoholicas',
             'description' => 'Cervezas, Refajos',
             'companies_id' => '1',
         ]);

@@ -13,6 +13,7 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="{{ asset('css/index.css') }}">
 </head>
+
 <body class="index">
 	
 	@if(Auth::check() == false)

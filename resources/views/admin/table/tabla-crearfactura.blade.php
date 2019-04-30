@@ -1,4 +1,4 @@
-<table border="0" class="table table-responsive table-hover" style="text-align: center">
+<table id="invoice" border="0" class="table table-responsive table-hover" style="text-align: center">
 	<thead class="tableth">
 	    <tr>
 			<th scope="col">Categoria</th>

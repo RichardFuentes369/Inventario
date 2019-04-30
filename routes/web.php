@@ -50,6 +50,7 @@ Route::group(['prefix'=>'administrador'], function(){
 	Route::get('categoriasB/{id}', 'CategoriesController@deleteCategory')->where(['id' => '[0-9]+']);
 	Route::get('inventarios','CategoriesController@allCategoryInventoryA');
 	Route::get('inventariosV/{id}','ProductsController@productsByCategoryA')->where(['id' => '[0-9]+']);
+	Route::get('inventariosB/{id}','ProductsController@deleteproductsByCategoryA')->where(['id' => '[0-9]+']);
 	Route::post('productosC','ProductsController@createProduct');
 	Route::post('productosA','ProductsController@updateProduct');
 	Route::get('empleados','UserController@allsellers');

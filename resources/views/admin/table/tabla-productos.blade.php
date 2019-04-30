@@ -22,7 +22,7 @@
       <td id="expiration_date">{{ $lp -> expiration_date}}</td>
       <td id="quantity">{{ $lp -> quantity}}</td> 
       <td><button class="btn btn-warning botonfunciones" data-toggle="modal" data-target="#myModal1" title="actualizar" onClick="seeData('{{ $lp -> id }}','{{ $lp -> name }}','{{ $lp -> lote }}','{{ $lp -> manufacturing_date }}','{{ $lp -> expiration_date }}','{{ $lp -> quantity }}')"><i class="material-icons">update</i></button></td>   
-      <td><form action="" method="Get">
+      <td><form action="{{ url('administrador')}}/{{ 'inventariosB' }}/{{ $lp -> id}}" method="Get">
         <button class="btn btn-danger botonfunciones" onClick="javascript: return confirm('¿Esta segudo que desea eliminar el producto con ID {{ $lp -> id }}?');" title="eliminar"><i class="material-icons">delete_forever</i></button></form></td>
     </tr>
     @endforeach

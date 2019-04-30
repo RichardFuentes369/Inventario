@@ -60,6 +60,12 @@ class ProductsController extends Controller
         }
         return back();
     }
+    /*Borrar producto*/
+    public function deleteproductsByCategoryA($id){
+        $existe = DB::DELETE('DELETE FROM products WHERE id = :varid',['varid' => $id]);
+        Flash::error("Se ha eliminado el estudiante con id " . $id . " de forma correcta");
+        return back();
+    }
     /*************************************************VENDEDOR*************************************************/
     /*Listar productos por categoria*/
     public function productsByCategoryV($id){
