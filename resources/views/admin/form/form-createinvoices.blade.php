@@ -39,7 +39,7 @@
 	<hr>
 	<div class="col-sm-12">
 		<div class="" align="right">
-			<button class="btn btn-success botonfunciones" title="Añadir Producto" onclick="productos()"><i class="material-icons">add</i></button>
+			<button class="btn btn-success botonfunciones" title="Añadir Producto" onclick="return productos()"><i class="material-icons">add</i></button>
 		</div><br>
 		@include('admin.table.tabla-crearfactura')
 	</div>
@@ -63,8 +63,28 @@
 		}
 	}
 
-	function productos(){ 
-	  	alert('agregar columna');
+	function productos() {
+		var table = document.getElementById("invoice");
+		var num = document.getElementById("invoice").getElementsByTagName('tr').length - 1;
+ 		{
+  			var row = table.insertRow(num+1);
+  			var cell0 = row.insertCell(0);
+  			var cell1 = row.insertCell(1);
+  			var cell2 = row.insertCell(2);
+  			var cell3 = row.insertCell(3);  			
+  			var cell4 = row.insertCell(4);
+  			var cell5 = row.insertCell(5);
+ 			var cell6 = row.insertCell(6);
+ 			cell0.innerHTML = num+1;
+  			cell1.innerHTML = "id_category";
+  			cell2.innerHTML = "id_product";
+  			cell3.innerHTML = "cantidad";
+  			cell4.innerHTML = "pre_uni";
+  			cell5.innerHTML = "iva";
+  			cell6.innerHTML = "pre_total";
+  			return false;
+  		}
 	}
 </script>
+
 
