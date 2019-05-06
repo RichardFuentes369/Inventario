@@ -14,7 +14,7 @@ class CategorySeeder extends Seeder
     {
          $category1 = Category::create([
     	    'id'	=> 1,
-        	'category_name'	=> 'Jabones en polvo',
+        	'category_name'	=> 'JabonesEnPolvo',
             'description' => 'Jabones en polvo',
             'companies_id' => '1',
     	]);
@@ -22,7 +22,7 @@ class CategorySeeder extends Seeder
 
         $category2 = Category::create([
     	    'id'	=> 2,
-        	'category_name'	=> 'Jabones en barra',
+        	'category_name'	=> 'JabonesEnBarra',
             'description' => 'Jabones en barra (personal y domestico)',
             'companies_id' => '1',
     	]);
@@ -30,7 +30,7 @@ class CategorySeeder extends Seeder
 
         $category3 = Category::create([
     	    'id'	=> 3,
-        	'category_name'	=> 'Jabones liquidos',
+        	'category_name'	=> 'JabonesLiquidos',
             'description' => 'Jabones para uso diario',
             'companies_id' => '1',
     	]);
@@ -38,7 +38,7 @@ class CategorySeeder extends Seeder
 
         $category4 = Category::create([
     	    'id'	=> 4,
-        	'category_name'	=> 'Crema de dientes',
+        	'category_name'	=> 'CremaDeDientes',
             'description' => 'Cremas de dientes de todo tipo',
             'companies_id' => '1',
     	]);
@@ -54,7 +54,7 @@ class CategorySeeder extends Seeder
 
         $category6 = Category::create([
             'id'    => 6,
-            'category_name' => 'Bebidas Alcoholicas',
+            'category_name' => 'BebidasAlcoholicas',
             'description' => 'Cervezas, Refajos',
             'companies_id' => '1',
         ]);
@@ -62,7 +62,7 @@ class CategorySeeder extends Seeder
 
         $category7 = Category::create([
             'id'    => 7,
-            'category_name' => 'Bebidas Refrescantes',
+            'category_name' => 'BebidasRefrescantes',
             'description' => 'Gaseosas, Aguas, Energizantes',
             'companies_id' => '1',
         ]);
@@ -70,7 +70,7 @@ class CategorySeeder extends Seeder
 
         $category8 = Category::create([
             'id'    => 8,
-            'category_name' => 'Galletas y Pasabocas',
+            'category_name' => 'Galletas&Pasabocas',
             'description' => 'Todo tipo de galletas',
             'companies_id' => '1',
         ]);

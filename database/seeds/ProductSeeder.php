@@ -14,11 +14,12 @@ class ProductSeeder extends Seeder
     {
          $product1 = Product::create([
         	'id' => 1,
-			'name' => 'Jabon en polvo, olor a frutas',
+			'name' => 'JabonEnPolvo,OlorAFrutas',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '1',
 			'provider_id' => '1',
     	]);
@@ -26,11 +27,12 @@ class ProductSeeder extends Seeder
 
         $product2 = Product::create([
         	'id' => 2,
-			'name' => 'Jabon en polvo, olor a lavanda',
+			'name' => 'JabonEnPolvo,OlorALavanda',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '1',
 			'provider_id' => '2',
     	]);
@@ -38,11 +40,12 @@ class ProductSeeder extends Seeder
 
         $product3 = Product::create([
         	'id' => 3,
-			'name' => 'Jabon en polvo, olor a tierra',
+			'name' => 'JabonEnPolvo,OlorATierra',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '1',
 			'provider_id' => '3',
     	]);
@@ -50,11 +53,12 @@ class ProductSeeder extends Seeder
 
         $product4 = Product::create([
         	'id' => 4,
-			'name' => 'Crema triple acción Colgate',
+			'name' => 'CremaTripleAcciónColgate',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '4',
 			'provider_id' => '4',
     	]);
@@ -62,11 +66,12 @@ class ProductSeeder extends Seeder
 
         $product5 = Product::create([
         	'id' => 5,
-			'name' => 'Crema con cristales refrescantes Colgate',
+			'name' => 'CremaConCristalesRefrescantesColgate',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '4',
 			'provider_id' => '4',
     	]);
@@ -74,11 +79,12 @@ class ProductSeeder extends Seeder
 
         $product6 = Product::create([
         	'id' => 6,
-			'name' => 'Shampoo Ego para hombres',
+			'name' => 'ShampooEgoParaHombres',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '5',
 			'provider_id' => '5',
     	]);
@@ -86,11 +92,12 @@ class ProductSeeder extends Seeder
 
         $product7 = Product::create([
         	'id' => 7,
-			'name' => 'Shampoo Ego para niños y niñas',
+			'name' => 'ShampooEgoParaNiños&Niñas',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '5',
 			'provider_id' => '6',
     	]);
@@ -98,11 +105,12 @@ class ProductSeeder extends Seeder
 
         $product8 = Product::create([
         	'id' => 8,
-			'name' => 'Shampoo Savital rubios aclarates',
+			'name' => 'ShampooSavitalRubiosAclarates',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '5',
 			'provider_id' => '8',
     	]);
@@ -110,11 +118,12 @@ class ProductSeeder extends Seeder
 
         $product9 = Product::create([
         	'id' => 9,
-			'name' => 'Jabon en polvo, olor a frutas',
+			'name' => 'JabonEnPolvo,OlorAFrutas',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '1',
 			'provider_id' => '9',
     	]);
@@ -122,11 +131,12 @@ class ProductSeeder extends Seeder
 
         $product11 = Product::create([
         	'id' => 11,
-			'name' => 'Jabon en polvo, olor a frutas',
+			'name' => 'JabonEnPolvo,OlorAFrutas',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '1',
 			'provider_id' => '10',
     	]);
@@ -134,11 +144,12 @@ class ProductSeeder extends Seeder
 
         $product12 = Product::create([
         	'id' => 12,
-			'name' => 'Jabon en polvo, olor a frutas',
+			'name' => 'JabonEnPolvo,OlorAFrutas',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '1',
 			'provider_id' => '10',
     	]);
@@ -146,11 +157,12 @@ class ProductSeeder extends Seeder
 
         $product13 = Product::create([
         	'id' => 13,
-			'name' => 'Jabon en polvo, olor a frutas',
+			'name' => 'JabonEnPolvo,OlorAFrutas',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '1',
 			'provider_id' => '11',
     	]);
@@ -158,11 +170,12 @@ class ProductSeeder extends Seeder
 
         $product14 = Product::create([
         	'id' => 14,
-			'name' => 'Jabon en polvo, olor a frutas',
+			'name' => 'JabonEnPolvo,OlorAFrutas',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '1',
 			'provider_id' => '11',
     	]);
@@ -170,11 +183,12 @@ class ProductSeeder extends Seeder
 
         $product15 = Product::create([
         	'id' => 15,
-			'name' => 'Aguila en lata',
+			'name' => 'AguilaEnLata',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '6',
 			'provider_id' => '12',
     	]);
@@ -182,11 +196,12 @@ class ProductSeeder extends Seeder
 
         $product16 = Product::create([
         	'id' => 16,
-			'name' => 'Aguila Light en lata',
+			'name' => 'AguilaLightEnLata',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '6',
 			'provider_id' => '12',
     	]);
@@ -194,11 +209,12 @@ class ProductSeeder extends Seeder
 
         $product17 = Product::create([
         	'id' => 17,
-			'name' => 'Aguila sin alcohol en lata',
+			'name' => 'AguilaSinAlcoholEnLata',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '6',
 			'provider_id' => '12',
     	]);
@@ -211,6 +227,7 @@ class ProductSeeder extends Seeder
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '7',
 			'provider_id' => '13',
     	]);
@@ -218,11 +235,12 @@ class ProductSeeder extends Seeder
 
         $product19 = Product::create([
         	'id' => 19,
-			'name' => 'Galletas Festival sabor a limon',
+			'name' => 'GalletasFestivalSaborALimon',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '8',
 			'provider_id' => '10',
     	]);
@@ -230,11 +248,12 @@ class ProductSeeder extends Seeder
 
         $product20 = Product::create([
         	'id' => 20,
-			'name' => 'Galletas Festival sabor a chocolate',
+			'name' => 'GalletasFestivalSaborAChocolate',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '8',
 			'provider_id' => '10',
     	]);
@@ -242,11 +261,12 @@ class ProductSeeder extends Seeder
 
         $product21 = Product::create([
         	'id' => 21,
-			'name' => 'Galletas Festival sabor a vainilla',
+			'name' => 'GalletasFestivalSaborAVainilla',
 			'lote' => '000000001',
 			'manufacturing_date' => '2019-02-16',
 			'expiration_date' => '2022-02-16',
 			'quantity' => 250,
+			'price' => 1000.0,
 			'category_id' => '8',
 			'provider_id' => '10',
     	]);

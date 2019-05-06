@@ -116,7 +116,7 @@ class CustomersController extends Controller
             $c->county = $request->input('county');
             $c->neighborhood = $request->input('neighborhood');
             $c->email = $request->input('email');
-            $c->companies_id = Auth::user()->companies->id;
+            $c->companies_id = Auth::user()->company->id;
             $c->save();
             Flash::success("Se ha registrado el cliente: ".$c->name." ".$c->lastname   . " de forma correcta");
             return redirect('vendedor/clientes');

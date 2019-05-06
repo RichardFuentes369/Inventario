@@ -33,6 +33,12 @@
 						  </div>
 						<textarea class="form-control inputcenter" name="ulote" rows="1" id="ulote" style="resize: none" required></textarea>
 					</div>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+						    <span class="input-group-text" id="basic-addon1">Precio</span>
+						  </div>
+						<textarea class="form-control inputcenter" name="uprice" rows="1" id="uprice" style="resize: none" required></textarea>
+					</div>
 				</div>
 				<div class="col-sm-6">
 					<div class="input-group mb-3">

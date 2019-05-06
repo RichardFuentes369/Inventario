@@ -27,7 +27,7 @@ class CategoriesController extends Controller
     	}
     	$existe = DB::SELECT('SELECT * FROM categories WHERE category_name = :varcategory',['varcategory' => $category_name]);
     	if($existe == false){
-    		$c = new categories();
+    		$c = new Category();
             if($ultimo_id == null){
                 $c->id == 1;
             }else{
@@ -35,7 +35,7 @@ class CategoriesController extends Controller
             }
             $c->category_name = $request->input('category_name');
             $c->description = $request->input('description');
-            $c->companies_id = Auth::user()->companies->id;
+            $c->companies_id = Auth::user()->Company->id;
             $c->save();
             Flash::success("Se ha registrado la categoria: ".$c->category_name. " de forma correcta");
             return redirect('administrador/categorias');

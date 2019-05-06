@@ -38,16 +38,46 @@
 	</div>
 	<hr>
 	<div class="col-sm-12">
-		<div class="" align="right">
-			<button class="btn btn-success botonfunciones" title="Añadir Producto" onclick="return productos()"><i class="material-icons">add</i></button>
-		</div><br>
+		<div class="row" align="center">
+			<div class="col-sm-10">
+				<div class="row">
+					<div class="col-sm-4">
+						<select id="id_category" name="id_category" class="form-control" style="width: 180px;height: 30px;font-size: 12px">
+							<option value="">---Seleccióne Categoria---</option>
+							@foreach($ListCategory as $category)
+								<option value="{{ $category->category_name }}">{{ $category->category_name }}</option>
+							@endforeach
+						</select>
+					</div>
+					<div class="col-sm-4">
+						<select id="id_product" name="id_product" class="form-control" style="width: 180px;height: 30px;font-size: 12px">
+							<option value="">---Seleccióne Producto---</option>
+							@foreach($ListProduct as $product)
+								<option value="{{ $product->name }}">{{ $product->name }}</option>
+							@endforeach
+						</select>
+					</div>
+					<div class="col-sm-2">
+						<input type="number" id="preuni" name="preuni" style="width: 100px;height: 30px;font-size: 12px" class="form-control" min="1" max="100" value="{{ $product -> price}}" readonly>
+					</div>
+					<div class="col-sm-2">
+						<input type="number" id="cantidad" name="cantidad" style="width: 60px;height: 30px;font-size: 12px" class="form-control" min="1" max="100" value="1">
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<button class="btn btn-success botonfunciones" title="Añadir Producto" onclick="return productos()"><i class="material-icons">add</i></button>
+			</div>
+		</div>
+		<br>
 		@include('admin.table.tabla-crearfactura')
 	</div>
 	<div class="col-sm-12">
 		<div class="row">
 			<div class="col-sm-1"></div>
-			<div class="col-sm-10">
+			<div class="col-sm-10" align="center">
 				total
+				<input type="text" class="form-control" style="width: 100px;height: 30px;font-size: 12px" readonly>
 			</div>
 			<div class="col-sm-1"></div>
 		</div>
@@ -63,9 +93,10 @@
 		}
 	}
 
-	function productos() {
+	function productos(){
 		var table = document.getElementById("invoice");
 		var num = document.getElementById("invoice").getElementsByTagName('tr').length - 1;
+
  		{
   			var row = table.insertRow(num+1);
   			var cell0 = row.insertCell(0);
@@ -75,16 +106,20 @@
   			var cell4 = row.insertCell(4);
   			var cell5 = row.insertCell(5);
  			var cell6 = row.insertCell(6);
- 			cell0.innerHTML = num+1;
-  			cell1.innerHTML = "id_category";
-  			cell2.innerHTML = "id_product";
-  			cell3.innerHTML = "cantidad";
-  			cell4.innerHTML = "pre_uni";
-  			cell5.innerHTML = "iva";
-  			cell6.innerHTML = "pre_total";
+ 			var x = num+1;
+ 			var category = document.getElementById("id_category").value=document.getElementById('id_category').value;
+ 			var product = document.getElementById("id_product").value=document.getElementById('id_product').value; 	
+ 			var cant = document.getElementById("cantidad").value=document.getElementById('cantidad').value;
+ 			var preuni = document.getElementById("preuni").value=document.getElementById('preuni').value;
+ 			cell0.innerHTML = "<input type=numeric name=id class=form-control style='width: 40px;height: 30px;font-size: 12px' value="+x+" readonly>";
+  			cell1.innerHTML = "<input type=text class=form-control style='width: 120px;height: 30px;font-size: 12px' readonly value="+category+">";
+  			cell2.innerHTML = "<input type=text class=form-control style='width: 200px;height: 30px;font-size: 12px' readonly value="+product+">";
+  			cell3.innerHTML = "<input type=number id=cantidad name=cantidad style='width: 60px;height: 30px;font-size: 12px' value="+cant+" class=form-control min=0 max=100>";
+  			cell4.innerHTML = "<input type=text id=pre_uni name=pre_uni class=form-control style='width: 120px;height: 30px;font-size: 12px' readonly value="+preuni+">";
+  			cell5.innerHTML = "<input type=text id=iva name=iva class=form-control style='width: 60px;height: 30px;font-size: 12px' readonly>";
+  			cell6.innerHTML = "<input type=text id=pre_total name=pre_total class=form-control style='width: 120px;height: 30px;font-size: 12px' readonly value="+cant*preuni+">";
   			return false;
   		}
 	}
+
 </script>
-
-

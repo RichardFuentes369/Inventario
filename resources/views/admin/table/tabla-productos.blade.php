@@ -5,6 +5,7 @@
       <th scope="col">Proveedor</th>
       <th scope="col">Nombre</th>
       <th scope="col">Lote</th>
+      <th scope="col">Precio unt</th>
       <th scope="col">F. Manufacturación</th>
       <th scope="col">F. Vencimiento</th>
       <th scope="col">Cantidad</th>
@@ -18,10 +19,11 @@
       <td id="provider">{{ $lp -> provider -> business_name }} <br> {{ $lp -> provider -> nit }}</td>
       <td id="name">{{ $lp -> name}}</td>
       <td id="lote">{{ $lp -> lote}}</td>
+      <td id="price">{{ $lp -> price}}</td>
       <td id="manufacturing_date">{{ $lp -> manufacturing_date}}</td>
       <td id="expiration_date">{{ $lp -> expiration_date}}</td>
       <td id="quantity">{{ $lp -> quantity}}</td> 
-      <td><button class="btn btn-warning botonfunciones" data-toggle="modal" data-target="#myModal1" title="actualizar" onClick="seeData('{{ $lp -> id }}','{{ $lp -> name }}','{{ $lp -> lote }}','{{ $lp -> manufacturing_date }}','{{ $lp -> expiration_date }}','{{ $lp -> quantity }}')"><i class="material-icons">update</i></button></td>   
+      <td><button class="btn btn-warning botonfunciones" data-toggle="modal" data-target="#myModal1" title="actualizar" onClick="seeData('{{ $lp -> id }}','{{ $lp -> name }}','{{ $lp -> lote }}','{{ $lp -> price }}','{{ $lp -> manufacturing_date }}','{{ $lp -> expiration_date }}','{{ $lp -> quantity }}')"><i class="material-icons">update</i></button></td>   
       <td><form action="{{ url('administrador')}}/{{ 'inventariosB' }}/{{ $lp -> id}}" method="Get">
         <button class="btn btn-danger botonfunciones" onClick="javascript: return confirm('¿Esta segudo que desea eliminar el producto con ID {{ $lp -> id }}?');" title="eliminar"><i class="material-icons">delete_forever</i></button></form></td>
     </tr>
@@ -47,10 +49,11 @@
 </div>
 
 <script>
-  function seeData(id,name,lote,manufacturing_date,expiration_date,quantity){
+  function seeData(id,name,lote,price,manufacturing_date,expiration_date,quantity){
     document.getElementById('uid').innerHTML = id;
     document.getElementById('uname').innerHTML = name;
     document.getElementById('ulote').innerHTML = lote;
+    document.getElementById('uprice').innerHTML = price;
     document.getElementById('umanufacturing_date').innerHTML = manufacturing_date;
     document.getElementById('uexpiration_date').innerHTML = expiration_date;
     document.getElementById('uquantity').innerHTML = quantity;

@@ -33,6 +33,12 @@
 						  </div>
 						<input class="form-control inputcenter" name="lote" rows="1">
 					</div>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+						    <span class="input-group-text" id="basic-addon1">Precio</span>
+						  </div>
+						<input class="form-control inputcenter" type="number" name="price" rows="1">
+					</div>
 				</div>
 				<div class="col-sm-6">
 					<div class="input-group mb-3">
