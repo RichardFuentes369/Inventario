@@ -66,6 +66,7 @@ Route::group(['prefix'=>'administrador'], function(){
 	Route::post('proveedoresA','ProvidersController@updateProvider');	
 	Route::get('proveedoresB/{id}', 'ProvidersController@deleteProvider')->where(['id' => '[0-9]+']);
 	Route::get('facturarD','InvoicesController@desingA');
+	Route::get('facturarD2/{id}','InvoicesController@byproducts');
 	Route::get('perfil','UserController@allpcu1');
 	Route::post('ajustesA','UserController@actualizarA');
 });
@@ -90,6 +91,7 @@ Route::group(['prefix'=>'vendedor'], function(){
 	Route::get('inventarios','CategoriesController@allCategoryInventoryV');
 	Route::get('inventariosV/{id}','ProductsController@productsByCategoryV')->where(['id' => '[0-9]+']);
 	Route::post('ajustesV','UserController@actualizarV');
+	Route::get('facturarD','InvoicesController@desingS');
+	Route::get('facturarD2/{id}','InvoicesController@byproducts');
 });
-
 

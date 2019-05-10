@@ -11,7 +11,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<title>Document</title>
-	<link rel="stylesheet" href="{{ asset('css/index.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/index.css') }}">	
 </head>
 
 <body class="index">
@@ -186,7 +186,7 @@
 								        	</div>
 								      	</li>
      									<li class="nav-item">
-								          	<a class="nav-link" href="{{ url('vendedor') }}/{{ 'facturar' }}">Facturar</a>
+								          	<a class="nav-link" href="{{ url('vendedor') }}/{{ 'facturarD' }}">Facturar</a>
 										</li>
 								    </ul>
 								</div>
@@ -225,9 +225,8 @@
 			<br>
 		</div>
 	@endif
-
 </body>
-
+	<script src="{{ asset('js/jquery-3.4.0.js') }}"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

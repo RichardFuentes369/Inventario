@@ -15,12 +15,17 @@ class InvoicesController extends Controller
 {
     /***************************************************ADMINISTRADOR**************************************************/
     /*Facturar*/
-    public function desingA(){
+    /*Facturar obtener categorias (primera parte del metodo)*/
+    public function desingA(Request $request){
         $ListCustomer = DB::SELECT('SELECT * FROM Customers');
         $ListInvoices = DB::SELECT('SELECT * FROM Invoices order by id desc limit 1');
         $ListCategory = DB::SELECT('SELECT * FROM Categories');
-        $ListProduct = DB::SELECT('SELECT * FROM Products');
-    	return view('admin.views.facturar',compact('ListCustomer','ListInvoices','ListCategory','ListProduct'));
+        return view('admin.views.facturar',compact('ListCustomer','ListInvoices','ListCategory'));
+    }
+
+    Public function byproducts($id){
+        return Product::where('category_id','=',$id)
+        ->get();
     }
 
     public function facturar(){
@@ -34,4 +39,15 @@ class InvoicesController extends Controller
     public function listarfactura($month,$day,$year,$customer){
     	return 'resultado';
     }
+
+    /***************************************************Vendedor**************************************************/
+    /*Facturar*/
+    /*Facturar obtener categorias (primera parte del metodo)*/
+    public function desingS(Request $request){
+        $ListCustomer = DB::SELECT('SELECT * FROM Customers');
+        $ListInvoices = DB::SELECT('SELECT * FROM Invoices order by id desc limit 1');
+        $ListCategory = DB::SELECT('SELECT * FROM Categories');
+        return view('admin.views.facturar',compact('ListCustomer','ListInvoices','ListCategory'));
+    }
 }
+

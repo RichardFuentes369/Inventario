@@ -42,26 +42,20 @@
 			<div class="col-sm-10">
 				<div class="row">
 					<div class="col-sm-4">
-						<select id="id_category" name="id_category" class="form-control" style="width: 180px;height: 30px;font-size: 12px">
-							<option value="">---Seleccióne Categoria---</option>
+						<select id="category" name="category" class="form-control" style="width: 180px;height: 30px;font-size: 12px" onchange="return listproduct(this.value);">
+							<option selected disabled="">---Seleccióne Categoria---</option>
 							@foreach($ListCategory as $category)
-								<option value="{{ $category->category_name }}">{{ $category->category_name }}</option>
+								<option value="{{ $category->id }}">{{ $category->category_name }}</option>
 							@endforeach
 						</select>
 					</div>
 					<div class="col-sm-4">
-						<select id="id_product" name="id_product" class="form-control" style="width: 180px;height: 30px;font-size: 12px">
-							<option value="">---Seleccióne Producto---</option>
-							@foreach($ListProduct as $product)
-								<option value="{{ $product->name }}">{{ $product->name }}</option>
-							@endforeach
+						<select id="products" name="products" class="form-control" style="width: 180px;height: 30px;font-size: 12px">
+							<option selected disabled="">---Seleccióne Producto---</option>
 						</select>
 					</div>
-					<div class="col-sm-2">
-						<input type="number" id="preuni" name="preuni" style="width: 100px;height: 30px;font-size: 12px" class="form-control" min="1" max="100" value="{{ $product -> price}}" readonly>
-					</div>
-					<div class="col-sm-2">
-						<input type="number" id="cantidad" name="cantidad" style="width: 60px;height: 30px;font-size: 12px" class="form-control" min="1" max="100" value="1">
+					<div class="col-sm-4">
+						<input type="number" id="cantidad" name="cantidad" style="width: 100px;height: 30px;font-size: 12px" class="form-control" min="1" max="100" value="1">
 					</div>
 				</div>
 			</div>
@@ -96,7 +90,6 @@
 	function productos(){
 		var table = document.getElementById("invoice");
 		var num = document.getElementById("invoice").getElementsByTagName('tr').length - 1;
-
  		{
   			var row = table.insertRow(num+1);
   			var cell0 = row.insertCell(0);
@@ -107,13 +100,15 @@
   			var cell5 = row.insertCell(5);
  			var cell6 = row.insertCell(6);
  			var x = num+1;
- 			var category = document.getElementById("id_category").value=document.getElementById('id_category').value;
- 			var product = document.getElementById("id_product").value=document.getElementById('id_product').value; 	
- 			var cant = document.getElementById("cantidad").value=document.getElementById('cantidad').value;
- 			var preuni = document.getElementById("preuni").value=document.getElementById('preuni').value;
+ 			var category = document.getElementById("category");
+ 			var products = document.getElementById("products"); 	
+ 			var selectedcategory = category.options[category.selectedIndex].text;
+ 			var selectedproducts = products.options[products.selectedIndex].text;
+ 			var cant = document.getElementById("cantidad").value;
+ 			var preuni = products.value;
  			cell0.innerHTML = "<input type=numeric name=id class=form-control style='width: 40px;height: 30px;font-size: 12px' value="+x+" readonly>";
-  			cell1.innerHTML = "<input type=text class=form-control style='width: 120px;height: 30px;font-size: 12px' readonly value="+category+">";
-  			cell2.innerHTML = "<input type=text class=form-control style='width: 200px;height: 30px;font-size: 12px' readonly value="+product+">";
+  			cell1.innerHTML = "<input type=text class=form-control style='width: 120px;height: 30px;font-size: 12px;' readonly value="+selectedcategory+">";
+  			cell2.innerHTML = "<input type=text class=form-control style='width: 200px;height: 30px;font-size: 12px' readonly value="+selectedproducts+">";
   			cell3.innerHTML = "<input type=number id=cantidad name=cantidad style='width: 60px;height: 30px;font-size: 12px' value="+cant+" class=form-control min=0 max=100>";
   			cell4.innerHTML = "<input type=text id=pre_uni name=pre_uni class=form-control style='width: 120px;height: 30px;font-size: 12px' readonly value="+preuni+">";
   			cell5.innerHTML = "<input type=text id=iva name=iva class=form-control style='width: 60px;height: 30px;font-size: 12px' readonly>";
@@ -122,4 +117,18 @@
   		}
 	}
 
+	function listproduct($id_category){
+		$(document).ready(function(){
+		      var id_category = $(this).val();
+		      $.get('facturarD2/'+$id_category, function(data){
+		//esta el la peticion get, la cual se divide en tres partes. ruta,variables y funcion
+		        console.log(data);
+		          var products = '<option value="">---Seleccióne Producto---</option>'
+		            for (var i=0; i<data.length;i++)
+		              products+='<option value="'+data[i].price+'">'+data[i].name+'</option>';
+		            $("#products").html(products);
+		    	});
+			});
+	}
 </script>
+
