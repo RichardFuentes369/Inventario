@@ -15,7 +15,8 @@ class CategoriesController extends Controller
     /*Mostrar Todas las Categorias*/
     public function allCategory(){
     	$category_list = DB::table('categories')->orderBy('id','asc')->paginate(10);
-        return view('admin.views.categorias',compact('category_list'));
+        $provider = Provider::all();
+        return view('admin.views.categorias',compact('category_list'))->with('provider',$provider);
     }
     /*Crear Categorias*/
     public function createCategory(Request $request){

@@ -1,4 +1,4 @@
-<form action="{{ url('administrador') }}/{{ 'productosC' }}" method="post">
+<form action="{{ url('administrador') }}/{{ 'productosCC' }}" method="post">
 	{{ csrf_field() }}
 	<center>
 		<div class="col-sm-12"><br>
@@ -67,7 +67,7 @@
 			</div>
 		</div>
 		<div class="col-sm-12" align="right">
-			<button type="submit" class="btn btn-warning botonejecutarfuncion">Actualizar</button>
+			<button type="submit" class="btn btn-success botonejecutarfuncion">Crear</button>
 		</div>
 	</center>
 </form>

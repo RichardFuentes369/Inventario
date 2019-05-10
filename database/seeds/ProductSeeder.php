@@ -125,7 +125,7 @@ class ProductSeeder extends Seeder
 			'quantity' => 250,
 			'price' => 1000.0,
 			'category_id' => '1',
-			'provider_id' => '9',
+			'provider_id' => '1',
     	]);
         $product9->save();
 
@@ -138,7 +138,7 @@ class ProductSeeder extends Seeder
 			'quantity' => 250,
 			'price' => 1000.0,
 			'category_id' => '1',
-			'provider_id' => '10',
+			'provider_id' => '1',
     	]);
         $product11->save();
 
@@ -151,7 +151,7 @@ class ProductSeeder extends Seeder
 			'quantity' => 250,
 			'price' => 1000.0,
 			'category_id' => '1',
-			'provider_id' => '10',
+			'provider_id' => '2',
     	]);
         $product12->save();
 
@@ -164,7 +164,7 @@ class ProductSeeder extends Seeder
 			'quantity' => 250,
 			'price' => 1000.0,
 			'category_id' => '1',
-			'provider_id' => '11',
+			'provider_id' => '1',
     	]);
         $product13->save();
 
@@ -177,7 +177,7 @@ class ProductSeeder extends Seeder
 			'quantity' => 250,
 			'price' => 1000.0,
 			'category_id' => '1',
-			'provider_id' => '11',
+			'provider_id' => '2',
     	]);
         $product14->save();
 
@@ -271,5 +271,18 @@ class ProductSeeder extends Seeder
 			'provider_id' => '10',
     	]);
         $product21->save();
+
+        $product22 = Product::create([
+        	'id' => 22,
+			'name' => 'JabonLiquidoDersa',
+			'lote' => '000000001',
+			'manufacturing_date' => '2019-02-16',
+			'expiration_date' => '2022-02-16',
+			'quantity' => 250,
+			'price' => 1000.0,
+			'category_id' => '3',
+			'provider_id' => '1',
+    	]);
+        $product22->save();
     }
 }

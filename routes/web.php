@@ -51,7 +51,8 @@ Route::group(['prefix'=>'administrador'], function(){
 	Route::get('inventarios','CategoriesController@allCategoryInventoryA');
 	Route::get('inventariosV/{id}','ProductsController@productsByCategoryA')->where(['id' => '[0-9]+']);
 	Route::get('inventariosB/{id}','ProductsController@deleteproductsByCategoryA')->where(['id' => '[0-9]+']);
-	Route::post('productosC','ProductsController@createProduct');
+	Route::post('productosCI','ProductsController@createProduct2');
+	Route::post('productosCC','ProductsController@createProduct1');
 	Route::post('productosA','ProductsController@updateProduct');
 	Route::get('empleados','UserController@allsellers');
 	Route::post('empleadosC','UserController@createSeller');

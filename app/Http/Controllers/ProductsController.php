@@ -19,8 +19,32 @@ class ProductsController extends Controller
         $provider = Provider::all();
     	return view('admin.views.productos')->with('ListProductByCategory',$ListProductByCategory)->with('category_name',$category_name)->with('provider',$provider); 
     }
-    /*Crear producto*/
-    public function createProduct(Request $request){
+    /*Crear producto por categoria*/
+    public function createProduct1(Request $request){
+        $ultimate_id = DB::SELECT('SELECT id FROM products order by id desc limit 1');
+        foreach ($ultimate_id as $ultimo_id) {
+            $ultimo_id = $ultimo_id -> id;
+        }
+        $p = new Product();
+        if($ultimo_id == null){
+            $p->id == 1;
+        }else{
+            $p->id = $ultimo_id + 1;
+        }
+        $p->category_id = $request->input('id_category');
+        $p->provider_id = $request->input('id_provider');
+        $p->name = $request->input('name');
+        $p->lote = $request->input('lote');
+        $p->price = $request->input('price');
+        $p->manufacturing_date = $request->input('manufacturing_date');
+        $p->expiration_date = $request->input('expiration_date');
+        $p->quantity = $request->input('quantity');
+        $p->save();
+        Flash::success("Se ha registrado el producto: ".$p->name. " de forma correcta");
+        return redirect('administrador/inventariosV/'.$p->category_id);
+    }
+    /*Crear producto por inventario*/
+    public function createProduct2(Request $request){
         $ultimate_id = DB::SELECT('SELECT id FROM products order by id desc limit 1');
         foreach ($ultimate_id as $ultimo_id) {
             $ultimo_id = $ultimo_id -> id;
