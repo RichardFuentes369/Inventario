@@ -80,8 +80,9 @@
 					    <input type="password" name="password" class="form-control inputcenter">
 					</div> 
 				</div>
-				<marquee>Si luego de actualizar algun dato el sistema te saca, recuerda que debes iniciar nuevamente la sessión. Y si
-				actualizaste la contraseña, ingresa con la nueva contraseña.</marquee>
+				<div class="col-sm-12" align="left" style="font-family: cursive;">
+					Recuerda que si actualizaste solo tus datos sin actualizar la contraseña podras seguir en la plataforma. <br>Si por el contrario, actualizaste la contraseña... El sistema te sacara de la plataforma, y deberas ingresar con la contraseña nueva.
+				</div>
 			</div>
 			<div class="modal-footer">
 				<button type="submit" class="btn btn-success">Actualizar</button>

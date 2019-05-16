@@ -232,5 +232,22 @@ class ProviderSeeder extends Seeder
             'description' => 'Empresa de Bebidas',
         ]);
         $provider13->save();
+
+        $provider14 = Provider::create([
+            'id'    => 14,
+            'nit'   => '1-0000013',
+            'business_name' => 'BigCola',
+            'country' => 'Colombia',
+            'department' => 'Cali',
+            'county' => 'Valle del Cauca',
+            'neighborhood' => 'Rodadero',
+            'address' => 'Calle 60 # 60 - 25',
+            'phone1' => '3101111134',
+            'phone2' => '3101111135',
+            'cellphone1' => '6011134',
+            'cellphone2' => '6011135',
+            'description' => 'Empresa de Bebidas',
+        ]);
+        $provider14->save();
     }
 }

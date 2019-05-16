@@ -284,5 +284,31 @@ class ProductSeeder extends Seeder
 			'provider_id' => '1',
     	]);
         $product22->save();
+
+        $product23 = Product::create([
+        	'id' => 23,
+			'name' => 'CocaCola350',
+			'lote' => '000000001',
+			'manufacturing_date' => '2019-02-16',
+			'expiration_date' => '2022-02-16',
+			'quantity' => 250,
+			'price' => 1000.0,
+			'category_id' => '7',
+			'provider_id' => '11',
+    	]);
+        $product23->save();
+
+        $product24 = Product::create([
+        	'id' => 24,
+			'name' => 'BigCola250',
+			'lote' => '000000001',
+			'manufacturing_date' => '2019-02-16',
+			'expiration_date' => '2022-02-16',
+			'quantity' => 250,
+			'price' => 1000.0,
+			'category_id' => '7',
+			'provider_id' => '14',
+    	]);
+        $product24->save();
     }
 }
