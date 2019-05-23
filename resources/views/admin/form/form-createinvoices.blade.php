@@ -72,12 +72,18 @@
 	</div>
 	<div class="col-sm-12">
 		<div class="row">
-			<div class="col-sm-1"></div>
-			<div class="col-sm-10" align="center">
-				total
-				<input type="text" class="form-control" style="width: 100px;height: 30px;font-size: 12px" readonly>
+			<div class="col-sm-9"></div>
+			<div class="col-sm-3">
+				<div class="row">
+					<div class="col-sm-4">
+						<button class="btn btn-primary botonfunciones" tittle="Totalizar" onclick="return totalizar()"><i class="material-icons">vertical_split</i></button>
+					</div>
+					<div class="col-sm-1">
+						<br>
+						<input type="text" name="total" id="total" class="form-control" style="width: 100px;height: 30px;font-size: 12px" readonly>
+					</div>
+				</div>
 			</div>
-			<div class="col-sm-1"></div>
 		</div>
 	</div>
 </form>
@@ -101,9 +107,8 @@
   			var cell2 = row.insertCell(2);
   			var cell3 = row.insertCell(3);  			
   			var cell4 = row.insertCell(4);
-  			var cell5 = row.insertCell(5);
+ 			var cell5 = row.insertCell(5);
  			var cell6 = row.insertCell(6);
- 			var cell7 = row.insertCell(7);
  			var x = num+1;
  			var category = document.getElementById("category");
  			var products = document.getElementById("products"); 	
@@ -114,11 +119,10 @@
  			cell0.innerHTML = "<input type=numeric name=id class=form-control style='width: 40px;height: 30px;font-size: 12px' value="+x+" readonly>";
   			cell1.innerHTML = "<input type=text class=form-control style='width: 120px;height: 30px;font-size: 12px;' readonly value="+selectedcategory+">";
   			cell2.innerHTML = "<input type=text class=form-control style='width: 200px;height: 30px;font-size: 12px' readonly value="+selectedproducts+">";
-  			cell3.innerHTML = "<input type=number id=cantidad name=cantidad style='width: 60px;height: 30px;font-size: 12px' value="+cant+" class=form-control min=0 max=100>";
-  			cell4.innerHTML = "<input type=text id=pre_uni name=pre_uni class=form-control style='width: 120px;height: 30px;font-size: 12px' readonly value="+preuni+">";
-  			cell5.innerHTML = "<input type=text id=iva name=iva class=form-control style='width: 60px;height: 30px;font-size: 12px' readonly>";
-  			cell6.innerHTML = "<input type=text id=pre_total name=pre_total class=form-control style='width: 120px;height: 30px;font-size: 12px' readonly value="+cant*preuni+">";
-  			cell7.innerHTML = "<button class=btn-danger onClick=borrart("+x+") title=Borrar style='border-radius: 16px'><i class='material-icons'>delete_forever</i></button>";
+  			cell3.innerHTML = "<input type=number id=cantidad name=cantidad style='width: 60px;height: 30px;font-size: 12px' readonly value="+cant+" class=form-control min=0 max=100>";
+  			cell4.innerHTML = "<input type=text id=pre_uni name=pre_uni class=form-control style='width: 90px;height: 30px;font-size: 12px' readonly value="+preuni+">";
+  			cell5.innerHTML = "<input type=text id=pre_total name=pre_total class=form-control style='width: 90px;height: 30px;font-size: 12px' readonly value="+cant*preuni+">";
+  			cell6.innerHTML = "<button class=btn-danger onClick=borrart("+x+") title=Borrar style='border-radius: 16px'><i class='material-icons'>delete_forever</i></button>";
   			return false;
   		}
 	}
@@ -143,6 +147,19 @@
 		        $("#products").html(products);
 		   	});
 		});
+	}
+
+
+	function totalizar(){
+		var filas = document.getElementById("invoice").getElementsByTagName('tr').length - 1;
+
+		for (var i=1; i<=filas; i++){
+			var pre = document.getElementById("pre_total").value;
+			var precio = precio + pre;
+		}
+
+		document.getElementById("total").value = precio;
+		return false;
 	}
 </script>
 
