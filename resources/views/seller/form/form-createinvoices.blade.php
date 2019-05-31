@@ -61,7 +61,7 @@
 								<input type="number" id="cantidad" name="cantidad" style="width: 100px;height: 30px;font-size: 12px" class="form-control" min="1" max="100" value="1">
 							</div>
 							<div class="col-sm-1">
-								<button class="btn btn-success botonfunciones" title="Añadir Producto" onclick="return productos()"><i class="material-icons">add</i></button></div>
+								<button class="btn btn-success botonfunciones" id="agregar" name="agregar" title="Añadir Producto" onclick="return productos()"><i class="material-icons">add</i></button></div>
 						</div>
 					</div>
 				</div>
@@ -73,11 +73,8 @@
 	<div class="col-sm-12">
 		<div class="row">
 			<div class="col-sm-9"></div>
-			<div class="col-sm-3">
+			<div class="col-sm-4">
 				<div class="row">
-					<div class="col-sm-4">
-						<button class="btn btn-primary botonfunciones" tittle="Totalizar" onclick="return totalizar()"><i class="material-icons">vertical_split</i></button>
-					</div>
 					<div class="col-sm-1">
 						<br>
 						<input type="text" name="total" id="total" class="form-control" style="width: 100px;height: 30px;font-size: 12px" readonly>
@@ -96,7 +93,6 @@
 			document.getElementById('showId').value="";	
 		}
 	}
-
 	function productos(){
 		var table = document.getElementById("invoice");
 		var num = document.getElementById("invoice").getElementsByTagName('tr').length - 1;
@@ -116,25 +112,26 @@
  			var selectedproducts = products.options[products.selectedIndex].text;
  			var cant = document.getElementById("cantidad").value;
  			var preuni = products.value;
- 			cell0.innerHTML = "<input type=numeric name=id class=form-control style='width: 40px;height: 30px;font-size: 12px' value="+x+" readonly>";
-  			cell1.innerHTML = "<input type=text class=form-control style='width: 120px;height: 30px;font-size: 12px;' readonly value="+selectedcategory+">";
-  			cell2.innerHTML = "<input type=text class=form-control style='width: 200px;height: 30px;font-size: 12px' readonly value="+selectedproducts+">";
-  			cell3.innerHTML = "<input type=number id=cantidad name=cantidad style='width: 60px;height: 30px;font-size: 12px' readonly value="+cant+" class=form-control min=0 max=100>";
-  			cell4.innerHTML = "<input type=text id=pre_uni name=pre_uni class=form-control style='width: 90px;height: 30px;font-size: 12px' readonly value="+preuni+">";
-  			cell5.innerHTML = "<input type=text id=pre_total name=pre_total class=form-control style='width: 90px;height: 30px;font-size: 12px' readonly value="+cant*preuni+">";
-  			cell6.innerHTML = "<button class=btn-danger onClick=borrart("+x+") title=Borrar style='border-radius: 16px'><i class='material-icons'>delete_forever</i></button>";
+ 			var total_n = parseFloat(cant) * parseFloat(preuni);
+ 			cell0.innerHTML = '<p name="id_p[]" class="non-margin">'+x+'</p>';
+ 			cell1.innerHTML = '<p name="category_p[]" class="non-margin">'+selectedcategory+'</p>';
+ 			cell2.innerHTML = '<p name="product_p[]" class="non-margin">'+selectedproducts+'</p>';
+ 			cell3.innerHTML = '<p name="cant_p[]" class="non-margin">'+cant+'</p>';
+ 			cell4.innerHTML = '<p name="pre_uni_p[]" class="non-margin">'+preuni+'</p>';
+ 			cell5.innerHTML = '<p name="total_p[]" class="non-margin">'+total_n+'</p>';
+ 			cell6.innerHTML = "<button class=btn-danger onClick=borrart("+x+") title=Borrar style='border-radius: 16px'><i class='material-icons'>delete_forever</i></button>";
+  			totalizar();
   			return false;
   		}
 	}
-
 	function borrart($id){
 		var table = document.getElementById("invoice");
 		var num = document.getElementById("invoice").getElementsByTagName('tr').length - 1;
 		var msj = window.alert('Elimminar#:'+$id);
 		var row = table.deleteRow($id);
+		totalizar();
 		return false;
 	}
-
 	function listproduct($id_category){
 		$(document).ready(function(){
 		    var id_category = $(this).val();
@@ -148,18 +145,12 @@
 		   	});
 		});
 	}
-
-
 	function totalizar(){
-		var filas = document.getElementById("invoice").getElementsByTagName('tr').length - 1;
-
-		for (var i=1; i<=filas; i++){
-			var pre = document.getElementById("pre_total").value;
-			var precio = precio + pre;
+		var totales=0;
+		var array_totales=document.getElementsByName("total_p[]");
+		for (var i=0; i<array_totales.length; i++) {
+			totales+=parseFloat(array_totales[i].innerHTML);
 		}
-
-		document.getElementById("total").value = precio;
-		return false;
+		document.getElementById("total").value=totales;
 	}
 </script>
-
