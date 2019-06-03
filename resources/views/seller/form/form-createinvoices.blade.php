@@ -72,14 +72,10 @@
 	</div>
 	<div class="col-sm-12">
 		<div class="row">
-			<div class="col-sm-9"></div>
-			<div class="col-sm-4">
-				<div class="row">
-					<div class="col-sm-1">
-						<br>
-						<input type="text" name="total" id="total" class="form-control" style="width: 100px;height: 30px;font-size: 12px" readonly>
-					</div>
-				</div>
+			<div class="col-sm-10"></div>
+			<div class="col-sm-2">
+				<br>
+				<input type="text" name="total" id="total" class="form-control" style="width: 150px;height: 50px;font-size: 25px" readonly>	
 			</div>
 		</div>
 	</div>
@@ -113,12 +109,12 @@
  			var cant = document.getElementById("cantidad").value;
  			var preuni = products.value;
  			var total_n = parseFloat(cant) * parseFloat(preuni);
- 			cell0.innerHTML = '<p name="id_p[]" class="non-margin">'+x+'</p>';
- 			cell1.innerHTML = '<p name="category_p[]" class="non-margin">'+selectedcategory+'</p>';
- 			cell2.innerHTML = '<p name="product_p[]" class="non-margin">'+selectedproducts+'</p>';
- 			cell3.innerHTML = '<p name="cant_p[]" class="non-margin">'+cant+'</p>';
- 			cell4.innerHTML = '<p name="pre_uni_p[]" class="non-margin">'+preuni+'</p>';
- 			cell5.innerHTML = '<p name="total_p[]" class="non-margin">'+total_n+'</p>';
+ 			cell0.innerHTML = '<p class="form-control" name="id_p[]" class="non-margin" style="width: auto;height: 30px; font-size: 12px" readonly>'+x+'</p>';
+ 			cell1.innerHTML = '<p class="form-control" name="category_p[]" class="non-margin" style="width: auto;height: 30px; font-size: 12px" readonly>'+selectedcategory+'</p>';
+ 			cell2.innerHTML = '<p class="form-control" name="product_p[]" class="non-margin" style="width: auto;height: 30px; font-size: 12px" readonly>'+selectedproducts+'</p>';
+ 			cell3.innerHTML = '<p class="form-control" name="cant_p[]" class="non-margin" style="width: auto;height: 30px; font-size: 12px" readonly>'+cant+'</p>';
+ 			cell4.innerHTML = '<p class="form-control" name="pre_uni_p[]" class="non-margin" style="width: auto;height: 30px; font-size: 12px" readonly>'+preuni+'</p>';
+ 			cell5.innerHTML = '<p class="form-control" name="total_p[]" class="non-margin" style="width: auto;height: 30px; font-size: 12px" readonly>'+total_n+'</p>';
  			cell6.innerHTML = "<button class=btn-danger onClick=borrart("+x+") title=Borrar style='border-radius: 16px'><i class='material-icons'>delete_forever</i></button>";
   			totalizar();
   			return false;

@@ -10,8 +10,6 @@
 			<th scope="col" style="width: 20px;height: 30px" class="tableth">Opción</th>
 		</tr>
 	</thead>
-	<tbody>
-	</tbody>
 </table>
 
 	
