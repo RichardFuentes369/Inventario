@@ -22,14 +22,7 @@
 				</div>
 			</div>
 			<div class="col-sm-6">
-				Factura no: 
-					@foreach ($ListInvoices as $idinvoice)
-						@if( $idinvoice->id == '')
-							<input type="text" class="form-control" style="width: auto;height: 30px; font-size: 12px" readonly value="1">
-						@else
-							<input type="text" class="form-control" style="width: auto;height: 30px; font-size: 12px" readonly value="">
-						@endif
-					@endforeach<br>	
+				Factura no: <input type="text" name="nro_fact" class="form-control" style="width: auto;height: 30px; font-size: 12px" readonly value="{{ $nro_fact }}">
 				Nit: {{ Auth::user()->company->nit}}<br>	
 				Dirección: {{ Auth::user()->company->address}}<br>	
 				Telefono: {{ Auth::user()->company->phone1}} - {{ Auth::user()->company->cellphone1}}
@@ -38,13 +31,13 @@
 	</div>
 	<hr>
 	<div class="col-sm-12">
-		<div class="row" align="rigth">
+		<div class="row" align="center">
 			<div class="col-sm-12">
 				<div class="row">
 					<div class="col-sm-1"></div>
 					<div class="col-sm-3">
 						<select id="category" name="category" class="form-control" style="width: 180px;height: 30px;font-size: 12px" onchange="return listproduct(this.value);">
-							<option selected disabled="">---Seleccióne Categoria---</option>
+							<option selected disabled="" value="--">---Seleccióne Categoria---</option>
 							@foreach($ListCategory as $category)
 								<option value="{{ $category->id }}">{{ $category->category_name }}</option>
 							@endforeach
@@ -52,7 +45,7 @@
 					</div>
 					<div class="col-sm-3">
 						<select id="products" name="products" class="form-control" style="width: 180px;height: 30px;font-size: 12px">
-							<option selected disabled="">---Seleccióne Producto---</option>
+							<option selected disabled="" value="--">---Seleccióne Producto---</option>
 						</select>
 					</div>
 					<div class="col-sm-5">
@@ -61,7 +54,8 @@
 								<input type="number" id="cantidad" name="cantidad" style="width: 100px;height: 30px;font-size: 12px" class="form-control" min="1" max="100" value="1">
 							</div>
 							<div class="col-sm-1">
-								<button class="btn btn-success botonfunciones" id="agregar" name="agregar" title="Añadir Producto" onclick="return productos()"><i class="material-icons">add</i></button></div>
+								<button class="btn btn-success botonfunciones" id="agregar" name="agregar" title="Añadir Producto" onclick="return productos()"><i class="material-icons">add</i></button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -72,10 +66,14 @@
 	</div>
 	<div class="col-sm-12">
 		<div class="row">
-			<div class="col-sm-10"></div>
+			<div class="col-sm-8"></div>
+			<div class="col-sm-2">
+				<input type="text" name="total" id="total" class="form-control" style="width: 150px;height: 50px;font-size: 25px; text-align: right;" readonly>	
+			</div>
 			<div class="col-sm-2">
 				<br>
-				<input type="text" name="total" id="total" class="form-control" style="width: 150px;height: 50px;font-size: 25px; text-align: right;" readonly>	
+				<button class="btn btn-primary botonfunciones" id="imprimir" name="imprimir" title="Imprimir Factura" onclick="return factura()"><i class="material-icons">print</i>
+				</button>
 			</div>
 		</div>
 	</div>
@@ -117,6 +115,7 @@
  			cell5.innerHTML = '<p class="form-control" name="total_p[]" class="non-margin" style="width: auto;height: 30px; font-size: 12px" readonly>'+total_n+'</p>';
  			cell6.innerHTML = "<button class=btn-danger onClick=borrart("+x+") title=Borrar style='border-radius: 16px'><i class='material-icons'>delete_forever</i></button>";
   			totalizar();
+			var cantidad = document.getElementById("cantidad").value="1";
   			return false;
   		}
 	}
@@ -148,5 +147,15 @@
 			totales+=parseFloat(array_totales[i].innerHTML);
 		}
 		document.getElementById("total").value=totales;
+	}
+	function factura(){	
+		var array_id=document.getElementsByName("id_p[]");
+		var array_category=document.getElementsByName("category_p[]");
+		var array_product=document.getElementsByName("product_p[]");
+		var array_cant=document.getElementsByName("cant_p[]");
+		var array_pre_uni=document.getElementsByName("pre_uni_p[]");
+		var array_total=document.getElementsByName("total_p[]");
+		window.print();
+		return false;
 	}
 </script>

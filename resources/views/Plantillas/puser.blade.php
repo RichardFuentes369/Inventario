@@ -135,10 +135,17 @@
 								        		<a class="nav-link" href="{{ url('administrador') }}/{{ 'clientes' }}">Clientes</a>
 								           		<a class="nav-link" href="{{ url('administrador') }}/{{ 'proveedores' }}">Proveedores</a>
 								        	</div>
-								      	</li>					      	
-      									<li class="nav-item">
-      										<a class="nav-link" href="{{ url('administrador') }}/{{ 'facturarD' }}">Facturar</a>
-      									</li>
+								      	</li>		
+								      	<li class="nav-item dropdown">
+								        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								          	Factura
+								        	</a>
+								        	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								        		<a class="nav-link" href="{{ url('administrador') }}/{{ 'facturarD' }}">Facturar</a>
+								          		<a class="nav-link" href="{{ url('administrador') }}/{{ 'subirFacturaA' }}">Subir Factura</a>
+								        		<a class="nav-link" href="{{ url('administrador') }}/{{ 'verFacturasA' }}">Descargar Factura</a>
+								        	</div>
+								      	</li>				
 								      	<li class="nav-item dropdown">
 								        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								          	Movimientos
