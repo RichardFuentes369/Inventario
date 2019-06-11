@@ -192,9 +192,16 @@
 									        	<a class="nav-link" href="{{ url('vendedor') }}/{{ 'inventarios' }}">Inventario</a>
 								        	</div>
 								      	</li>
-     									<li class="nav-item">
-								          	<a class="nav-link" href="{{ url('vendedor') }}/{{ 'facturarD' }}">Facturar</a>
-										</li>
+     									<li class="nav-item dropdown">
+								        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								          	Factura
+								        	</a>
+								        	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								        		<a class="nav-link" href="{{ url('vendedor') }}/{{ 'facturarD' }}">Facturar</a>
+								          		<a class="nav-link" href="{{ url('vendedor') }}/{{ 'subirFacturaS' }}">Subir Factura</a>
+								        		<a class="nav-link" href="{{ url('vendedor') }}/{{ 'verFacturasS' }}">Descargar Factura</a>
+								        	</div>
+								      	</li>
 								    </ul>
 								</div>
 							</nav>

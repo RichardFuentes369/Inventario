@@ -73,7 +73,7 @@ Route::group(['prefix'=>'administrador'], function(){
 	Route::get('facturasB/{id}','InvoicesController@deleteInvoiceA');
 	Route::get('perfil','UserController@allpcu1');
 	Route::post('ajustesA','UserController@actualizarA');
-	Route::post('subirF','InvoicesController@upInvoiceA');
+	Route::post('subirFA','InvoicesController@upInvoiceA');
 	Route::get('verFacturasA','InvoicesController@allInvoiceA');
 });
 
@@ -85,8 +85,8 @@ Route::group(['prefix'=>'vendedor'], function(){
 	Route::get('inventarios', function(){
 		return view('seller.views.inventarios');
 	});
-	Route::get('facturar', function(){
-		return view('seller.views.facturar');
+	Route::get('subirFacturaS', function(){
+		return view('admin.views.subir-factura');
 	});
 	/*controladores*/
 	Route::get('perfil','UserController@allc2');
@@ -99,5 +99,8 @@ Route::group(['prefix'=>'vendedor'], function(){
 	Route::post('ajustesV','UserController@actualizarV');
 	Route::get('facturarD','InvoicesController@desingS');
 	Route::get('facturarD2/{id}','InvoicesController@byproducts');
+	Route::get('facturasB/{id}','InvoicesController@deleteInvoiceS');
+	Route::post('subirFS','InvoicesController@upInvoiceS');
+	Route::get('verFacturasS','InvoicesController@allInvoiceS');
 });
 

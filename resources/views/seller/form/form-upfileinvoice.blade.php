@@ -1,4 +1,4 @@
-<form action="{{ url('administrador') }}/{{ 'subirFA' }}" method="post" enctype="multipart/form-data">
+<form action="{{ url('vendedor') }}/{{ 'subirFS' }}" method="post" enctype="multipart/form-data">
 	{{ csrf_field() }}
 	<center>
 		<br>

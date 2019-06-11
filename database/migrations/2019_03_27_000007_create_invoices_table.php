@@ -18,6 +18,8 @@ class CreateInvoicesTable extends Migration
             $table->integer('nro_fact')->nullable();
             $table->string('fecha')->nullable();
             $table->string('pdf')->nullable();
+            $table->double('price')->nullable();
+            $table->string('user')->nullable();
             $table->integer('companies_id')->unsigned(); //referencia id a la tabla compañia
             $table->foreign('companies_id') //llave foranea
                   ->references('id')
