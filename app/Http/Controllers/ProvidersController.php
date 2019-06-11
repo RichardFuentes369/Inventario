@@ -25,7 +25,7 @@ class ProvidersController extends Controller
         $existe = DB::SELECT('SELECT * FROM providers WHERE nit = :varnit',['varnit' => $nit]);
         if($existe == false){
             $p = new provider();
-            if($ultimo_id == null){
+            if($ultimate_id == null){
                 $p->id == 1;
             }else{
                 $p->id = $ultimo_id + 1;

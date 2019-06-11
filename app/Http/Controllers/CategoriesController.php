@@ -29,7 +29,7 @@ class CategoriesController extends Controller
     	$existe = DB::SELECT('SELECT * FROM categories WHERE category_name = :varcategory',['varcategory' => $category_name]);
     	if($existe == false){
     		$c = new Category();
-            if($ultimo_id == null){
+            if($ultimate_id == null){
                 $c->id == 1;
             }else{
                 $c->id = $ultimo_id + 1;

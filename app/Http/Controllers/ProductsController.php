@@ -26,7 +26,7 @@ class ProductsController extends Controller
             $ultimo_id = $ultimo_id -> id;
         }
         $p = new Product();
-        if($ultimo_id == null){
+        if($ultimate_id == null){
             $p->id == 1;
         }else{
             $p->id = $ultimo_id + 1;

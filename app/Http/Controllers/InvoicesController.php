@@ -57,13 +57,14 @@ class InvoicesController extends Controller
             $name = time().$file->getClientOriginalName();
             $file->move(public_path().'/pdf/',$name);
         }
+        
         $i = new Invoice();
-        if($ultimo_id == null){
+        if($ultimate_id == null){
             $i->id == 1;
         }else{
             $i->id = $ultimo_id + 1;        
         }
-        if($ultimo_fact == null){
+        if($ultimate_fact == null){
             $i->nro_fact == 1;
         }else{
             $i->nro_fact = $ultimo_fact + 1;   

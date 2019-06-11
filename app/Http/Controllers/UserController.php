@@ -36,7 +36,7 @@ class UserController extends Controller
         $existe = DB::SELECT('SELECT * FROM users WHERE dni = :vardni',['vardni' => $dni]);
         if($existe == false){
             $u = new User();
-            if($ultimo_id == null){
+            if($ultimate_id == null){
                 $u->id == 1;
             }else{
                 $u->id = $ultimo_id + 1;

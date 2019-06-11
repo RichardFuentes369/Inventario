@@ -1,4 +1,4 @@
-<form action="{{ url('administrador') }}/{{ 'subirF' }}" method="post">
+<form action="{{ url('administrador') }}/{{ 'categoriasC' }}" method="post">
 	{{ csrf_field() }}
 	<center>
 		<div class="col-sm-12"><br>
