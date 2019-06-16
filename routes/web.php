@@ -42,9 +42,6 @@ Route::group(['prefix'=>'administrador'], function(){
 	Route::get('ajustes', function(){
 		return view('admin.views.ajustes');
 	});	
-	Route::get('subirFacturaA', function(){
-		return view('admin.views.subir-factura');
-	});	
 	/*controladores*/
 	Route::get('categorias','CategoriesController@allCategory');
 	Route::post('categoriasC','CategoriesController@createCategory');
@@ -68,13 +65,19 @@ Route::group(['prefix'=>'administrador'], function(){
 	Route::post('proveedoresC','ProvidersController@createProvider');
 	Route::post('proveedoresA','ProvidersController@updateProvider');	
 	Route::get('proveedoresB/{id}', 'ProvidersController@deleteProvider')->where(['id' => '[0-9]+']);
+
+	Route::get('subirFacturaA','InvoicesController@desingUpInvoiceA');	
+	Route::get('meses','MonthContoller@allMonthA');
+	Route::post('mesesC','MonthContoller@monthCreateA');
+	Route::get('mesesV/{id}','InvoicesController@allInvoiceA');
+	Route::get('mesesB/{id}','MonthContoller@deleteMonthA');
+
 	Route::get('facturarD','InvoicesController@desingA');
 	Route::get('facturarD2/{id}','InvoicesController@byproducts');
 	Route::get('facturasB/{id}','InvoicesController@deleteInvoiceA');
 	Route::get('perfil','UserController@allpcu1');
 	Route::post('ajustesA','UserController@actualizarA');
 	Route::post('subirFA','InvoicesController@upInvoiceA');
-	Route::get('verFacturasA','InvoicesController@allInvoiceA');
 });
 
 Route::group(['prefix'=>'vendedor'], function(){	
@@ -97,10 +100,16 @@ Route::group(['prefix'=>'vendedor'], function(){
 	Route::get('inventarios','CategoriesController@allCategoryInventoryV');
 	Route::get('inventariosV/{id}','ProductsController@productsByCategoryV')->where(['id' => '[0-9]+']);
 	Route::post('ajustesV','UserController@actualizarV');
+
+	Route::get('subirFacturaS','InvoicesController@desingUpInvoiceS');	
+	Route::get('meses','MonthContoller@allMonthS');
+	Route::post('mesesC','MonthContoller@monthCreateS');
+	Route::get('mesesV/{id}','InvoicesController@allInvoiceS');
+	Route::post('subirFV','InvoicesController@upInvoiceS');
+
+
 	Route::get('facturarD','InvoicesController@desingS');
 	Route::get('facturarD2/{id}','InvoicesController@byproducts');
 	Route::get('facturasB/{id}','InvoicesController@deleteInvoiceS');
-	Route::post('subirFS','InvoicesController@upInvoiceS');
-	Route::get('verFacturasS','InvoicesController@allInvoiceS');
 });
 

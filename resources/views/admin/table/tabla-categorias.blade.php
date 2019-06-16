@@ -58,12 +58,8 @@
   function seeData1(id){
     document.getElementById('aid').innerHTML = id;
   }
-</script>
-
-
-<script>
   function seeData2(id,category_name,description){
-    document.getElementById('aid').innerHTML = id;
+    document.getElementById('aid2').innerHTML = id;
     document.getElementById('acn').innerHTML = category_name;
     document.getElementById('ad').innerHTML = description;
   }

@@ -9,6 +9,6 @@ class Invoice extends Model
     protected $table = "invoices";
 
     protected $fillable = [
-    	'id', 'fecha', 'pdf', 'nro_fact',
+    	'id', 'fecha', 'pdf', 'price', 'user', 'nro_fact', 'month_id'
     ];
 }

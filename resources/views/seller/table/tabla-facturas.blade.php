@@ -19,8 +19,13 @@
       <td id="category_name">
         <a type="button" href="{{ url('pdf')}}/{{ $il -> pdf }}" target="_blank" class="btn btn-primary">Descargar</a>
       </td>
-      <td><form action="{{ url('administrador') }}/{{ 'facturasB' }}/{{ $il -> id }}" method="Get">
-        <button class="btn btn-danger botonfunciones" onClick="javascript: return confirm('¿Esta segudo que desea eliminar la factura con ID {{ $il -> id }}?');"><i class="material-icons">delete_forever</i></button></form></td>
+      <td>
+        @if(Auth::user()->name."".Auth::user()->lastname == $il -> user)
+          <form action="{{ url('vendedor') }}/{{ 'facturasB' }}/{{ $il -> id }}" method="Get">
+          <button class="btn btn-danger botonfunciones" onClick="javascript: return confirm('¿Esta segudo que desea eliminar la factura con ID {{ $il -> id }}?');"><i class="material-icons">delete_forever</i></button></form>
+        @else
+        @endif
+      </td>
     </tr>
     @endforeach
   </tbody>

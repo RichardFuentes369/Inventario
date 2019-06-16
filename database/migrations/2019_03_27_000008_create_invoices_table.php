@@ -20,10 +20,10 @@ class CreateInvoicesTable extends Migration
             $table->string('pdf')->nullable();
             $table->double('price')->nullable();
             $table->string('user')->nullable();
-            $table->integer('companies_id')->unsigned(); //referencia id a la tabla compañia
-            $table->foreign('companies_id') //llave foranea
+            $table->integer('month_id')->unsigned(); //referencia id a la tabla compañia
+            $table->foreign('month_id') //llave foranea
                   ->references('id')
-                  ->on('companies')
+                  ->on('months')
                   ->onUpdate('cascade')
                   ->onDelete('cascade');
             $table->timestamps();

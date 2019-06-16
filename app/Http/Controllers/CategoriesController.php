@@ -47,7 +47,7 @@ class CategoriesController extends Controller
     }
     /*Actualizar Categoria*/
     public function updateCategory(Request $request){
-        $id = $request->input('id');
+        $id = $request->input('id_category');
         $category_name = $request->input('category_name');
         $description = $request->input('description');
         $actualizar = DB::UPDATE('UPDATE categories set category_name = :varname, 

@@ -143,7 +143,7 @@
 								        	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 								        		<a class="nav-link" href="{{ url('administrador') }}/{{ 'facturarD' }}">Facturar</a>
 								          		<a class="nav-link" href="{{ url('administrador') }}/{{ 'subirFacturaA' }}">Subir Factura</a>
-								        		<a class="nav-link" href="{{ url('administrador') }}/{{ 'verFacturasA' }}">Descargar Factura</a>
+								        		<a class="nav-link" href="{{ url('administrador') }}/{{ 'meses' }}">Listar Facturas</a>
 								        	</div>
 								      	</li>				
 								      	<li class="nav-item dropdown">
@@ -199,7 +199,7 @@
 								        	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 								        		<a class="nav-link" href="{{ url('vendedor') }}/{{ 'facturarD' }}">Facturar</a>
 								          		<a class="nav-link" href="{{ url('vendedor') }}/{{ 'subirFacturaS' }}">Subir Factura</a>
-								        		<a class="nav-link" href="{{ url('vendedor') }}/{{ 'verFacturasS' }}">Descargar Factura</a>
+								        		<a class="nav-link" href="{{ url('vendedor') }}/{{ 'meses' }}">Listar Facturas</a>
 								        	</div>
 								      	</li>
 								    </ul>

@@ -7,11 +7,11 @@
   <hr>
   <div class="col-sm-12">
     <div class="row">
-      <div class="col-sm-3"></div>
-      <div class="col-sm-6">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
         @include('seller.table.tabla-facturas')  
       </div>
-      <div class="col-sm-3"></div>
+      <div class="col-sm-2"></div>
     </div>
   </div>
   <hr>
