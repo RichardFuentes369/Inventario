@@ -4,13 +4,13 @@
 		<div class="col-sm-12"><br>
 			<div class="row">
 				<div class="col-sm-12">
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Nombres</span>
 						  </div>
 						  <input type="text" name="name" class="form-control inputcenter">
 					</div>
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Apellidos</span>
 						</div>
@@ -18,7 +18,7 @@
 					</div> 
 				</div>
 				<div class="col-sm-6">
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Tipo Documento</span>
 						</div>
@@ -29,13 +29,13 @@
 							<option value="pasaporte">Pasaporte</option>
 						</select>
 					</div> 
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">DNI</span>
 						</div>
 						<input type="text" name="dni" class="form-control inputcenter">
 					</div> 
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Fecha Nacimiento</span>
 						</div>
@@ -43,7 +43,7 @@
 					</div> 
 				</div>
 				<div class="col-sm-6">
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Sexo</span>
 						</div>
@@ -53,13 +53,13 @@
 							<option value="F">Femenino</option>
 						</select>
 					</div> 
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Fijo</span>
 						</div>
 						<input type="text" name="phone" class="form-control inputcenter">
 					</div> 
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Celular</span>
 						</div>
@@ -67,7 +67,7 @@
 					</div> 
 				</div>
 				<div class="col-sm-12">
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Dirección</span>
 						</div>
@@ -75,13 +75,13 @@
 					</div> 
 				</div>
 				<div class="col-sm-6">
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Departamento</span>
 						</div>
 						<input type="text" name="department" class="form-control inputcenter">
 					</div> 
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Ciudad</span>
 						</div>
@@ -89,13 +89,13 @@
 					</div> 
 				</div>
 				<div class="col-sm-6">
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Barrio</span>
 						</div>
 						<input type="text" name="neighborhood" class="form-control inputcenter">
 					</div> 
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">@</span>
 						  </div>

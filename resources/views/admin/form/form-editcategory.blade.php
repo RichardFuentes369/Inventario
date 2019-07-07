@@ -4,19 +4,19 @@
 		<div class="col-sm-12"><br>
 			<div class="row">
 				<div class="col-sm-12">
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepand">
 							<span class="input-group-text" id="basic-addon1">Id</span>
 						</div>
 						<textarea class="form-control inputcenter" rows="1" name="id_category" id="aid2" style="resize: none" readonly></textarea>
 					</div>	
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Nombre de la categoria</span>
 						  </div>
 						<textarea class="form-control inputcenter" rows="1" name="category_name" id="acn" style="resize: none"></textarea>
 					</div>
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Descripción</span>
 						</div>

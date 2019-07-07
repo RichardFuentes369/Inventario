@@ -3,14 +3,14 @@
 	<center>
 		<div class="col-sm-12"><br>
 			<div class="row">
-				<div class="col-sm-12">					
-					<div class="input-group mb-3">
+				<div class="col-sm-12">			
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">ID</span>
 						  </div>
 						<textarea class="form-control inputcenter" name="uid" rows="1" id="uid" style="resize: none" readonly></textarea>
 					</div>
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Proveedor</span>
 						  </div>
@@ -21,19 +21,19 @@
 							@endforeach
 						</select>
 					</div>
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Nombre</span>
 						  </div>
 						<textarea class="form-control inputcenter" name="uname" rows="1" id="uname" style="resize: none" required></textarea>
 					</div>
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Lote</span>
 						  </div>
 						<textarea class="form-control inputcenter" name="ulote" rows="1" id="ulote" style="resize: none" required></textarea>
 					</div>
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Precio</span>
 						  </div>
@@ -41,7 +41,7 @@
 					</div>
 				</div>
 				<div class="col-sm-6">
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">F. Manufacturación</span>
 						</div>
@@ -49,7 +49,7 @@
 					</div> 
 				</div>
 				<div class="col-sm-6">
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">F. Vencimiento</span>
 						</div>
@@ -57,7 +57,7 @@
 					</div> 	
 				</div>
 				<div class="col-sm-12">
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Cantidad</span>
 						</div>

@@ -10,7 +10,7 @@
 						  </div>
 					    <input type="text" class="form-control inputcenter" name="category_name" required>
 					</div>
-					<div class="input-group mb-3">
+					<div class="texarea-group mb-3">
 						<div class="input-group-prepend">
 						    <span class="input-group-text" id="basic-addon1">Descripción</span>
 						</div>
