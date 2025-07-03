@@ -63,8 +63,10 @@ class CategoriesController extends Controller
     }
     /*Mostrar Todas las Categorias para hacer el inventario*/
     public function allCategoryInventoryA(){
-        $category_list_inventory = Category::select('products.category_id as category_id','categories.category_name as category_name',DB::raw('count(*) as quantity'))
-            ->join('products','categories.id','=','products.category_id')->groupBy('category_id')->orderBy('category_id','asc')
+$category_list_inventory = Category::select('products.category_id as category_id','categories.category_name as category_name',DB::raw('count(*) as quantity'))
+            ->join('products','categories.id','=','products.category_id')
+            ->groupBy('products.category_id', 'categories.category_name') // Añade category_name aquí
+            ->orderBy('category_id','asc')
             ->paginate(10);
         $provider = Provider::all();
         return view('admin.views.inventarios',compact('category_list_inventory'))->with('provider',$provider);
@@ -72,8 +74,10 @@ class CategoriesController extends Controller
     /***************************************************VENDEDOR**************************************************/
     /*Mostrar Todas las Categorias para hacer el inventario*/
     public function allCategoryInventoryV(){
-        $category_list_inventory = Category::select('products.category_id as category_id','categories.category_name as category_name',DB::raw('count(*) as quantity'))
-            ->join('products','categories.id','=','products.category_id')->groupBy('category_id')->orderBy('category_id','asc')
+$category_list_inventory = Category::select('products.category_id as category_id','categories.category_name as category_name',DB::raw('count(*) as quantity'))
+            ->join('products','categories.id','=','products.category_id')
+            ->groupBy('products.category_id', 'categories.category_name') // Añade category_name aquí
+            ->orderBy('category_id','asc')
             ->paginate(10);
         return view('seller.views.inventarios',compact('category_list_inventory'));
     }

@@ -24,8 +24,8 @@ class InvoicesController extends Controller
     }
     /*Facturar obtener categorias (primera parte del metodo)*/
     public function desingA(Request $request){
-        $ListCustomer = DB::SELECT('SELECT * FROM Customers');
-        $ListCategory = DB::SELECT('SELECT * FROM Categories');
+        $ListCustomer = DB::SELECT('SELECT * FROM customers');
+        $ListCategory = DB::SELECT('SELECT * FROM categories');
         $ListInvoices = DB::SELECT('SELECT nro_fact FROM invoices order by id desc limit 1');
         if($ListInvoices == null){
             $nro_fact = 1;
@@ -111,8 +111,8 @@ class InvoicesController extends Controller
 
     /*Facturar obtener categorias (primera parte del metodo)*/
     public function desingS(Request $request){
-        $ListCustomer = DB::SELECT('SELECT * FROM Customers');
-        $ListCategory = DB::SELECT('SELECT * FROM Categories');
+        $ListCustomer = DB::SELECT('SELECT * FROM customers');
+        $ListCategory = DB::SELECT('SELECT * FROM categories');
         $ListInvoices = DB::SELECT('SELECT nro_fact FROM invoices order by id desc limit 1');
         if($ListInvoices == null){
             $nro_fact = 1;

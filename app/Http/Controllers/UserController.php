@@ -104,13 +104,13 @@ class UserController extends Controller
         $password = $request->input('password');
         $passwordencriptada = bcrypt($password);
         if($password == ""){
-            $actualizar = DB::UPDATE('UPDATE Users set name = :varname, lastname = :varlastname, email = :varcorreo,
+            $actualizar = DB::UPDATE('UPDATE users set name = :varname, lastname = :varlastname, email = :varcorreo,
              sexo = :varsexo, phone = :varphone, cellphone = :varcellphone, birthdate = :varbirthdate
             WHERE dni = :vardni',['varname' => $name,'varlastname' => $lastname,'varcorreo' => $email,'varcorreo' => $email,'varsexo' => $sexo,'varphone' => $phone,'varbirthdate' => $birthdate,'varcellphone' => $cellphone, 'vardni' =>$dni]);
             Flash::warning("Sus datos han sido actualizados correctamente");
             return back();
         }else{
-            $actualizar = DB::UPDATE('UPDATE Users set name = :varname, lastname = :varlastname, email = :varcorreo,
+            $actualizar = DB::UPDATE('UPDATE users set name = :varname, lastname = :varlastname, email = :varcorreo,
              sexo = :varsexo, phone = :varphone, cellphone = :varcellphone, birthdate = :varbirthdate, password = :varpassword
             WHERE dni = :vardni',['varname' => $name,'varlastname' => $lastname,'varcorreo' => $email,'varcorreo' => $email,'varsexo' => $sexo,'varphone' => $phone,'varbirthdate' => $birthdate,'varcellphone' => $cellphone,'varpassword' => $passwordencriptada, 'vardni' =>$dni]);
             Auth::logout();
@@ -138,13 +138,13 @@ class UserController extends Controller
         $password = $request->input('password');
         $passwordencriptada = bcrypt($password);
         if($password == ""){
-            $actualizar = DB::UPDATE('UPDATE Users set name = :varname, lastname = :varlastname, email = :varcorreo,
+            $actualizar = DB::UPDATE('UPDATE users set name = :varname, lastname = :varlastname, email = :varcorreo,
              sexo = :varsexo, phone = :varphone, cellphone = :varcellphone, birthdate = :varbirthdate
             WHERE dni = :vardni',['varname' => $name,'varlastname' => $lastname,'varcorreo' => $email,'varcorreo' => $email,'varsexo' => $sexo,'varphone' => $phone,'varbirthdate' => $birthdate,'varcellphone' => $cellphone, 'vardni' =>$dni]);
             Flash::warning("Sus datos han sido actualizados correctamente");
             return back();
         }else{
-            $actualizar = DB::UPDATE('UPDATE Users set name = :varname, lastname = :varlastname, email = :varcorreo,
+            $actualizar = DB::UPDATE('UPDATE users set name = :varname, lastname = :varlastname, email = :varcorreo,
              sexo = :varsexo, phone = :varphone, cellphone = :varcellphone, birthdate = :varbirthdate, password = :varpassword
             WHERE dni = :vardni',['varname' => $name,'varlastname' => $lastname,'varcorreo' => $email,'varcorreo' => $email,'varsexo' => $sexo,'varphone' => $phone,'varbirthdate' => $birthdate,'varcellphone' => $cellphone,'varpassword' => $passwordencriptada, 'vardni' =>$dni]);
             Auth::logout();
